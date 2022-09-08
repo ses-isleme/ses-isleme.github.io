@@ -1,0 +1,14 @@
+Time		Sample				Event
+
+   00:00.004        1     +    0    0    0	(N
+   00:16.228     4057     +    0    0    0	(AFIB
+   00:23.692     5923     +    0    0    0	(N
+   00:59.768    14942     +    0    0    0	(AFIB
+   01:04.076    16019     +    0    0    0	(NOISE
+
+
+start 24:50
+end 29:50
+
+AFIB - atrial fibrillation
+N - normal 

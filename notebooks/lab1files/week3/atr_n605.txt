@@ -1,0 +1,10 @@
+Time		Sample				Event
+
+    0:00.004        1     +    0    0    0	(NOISE
+   02:27.768    36942     +    0    0    0	(VT
+   02:56.460    44115     +    0    0    0	(NOISE
+
+start 25:00
+end 30:00
+
+VT - ventricular tachycardia

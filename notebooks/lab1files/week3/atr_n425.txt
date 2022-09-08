@@ -1,0 +1,18 @@
+Time		Sample				Event
+
+    0:00.004        1     +    0    0    0	(NOISE
+   00:15.612     3903     +    0    0    0	(N
+   00:26.612     6653     +    0    0    0	(NOISE
+   00:29.612     7403     +    0    0    0	(VT
+   00:58.408    14602     +    0    0    0	(NOISE
+   02:06.408    31602     +    0    0    0	(B
+   03:58.496    59624     +    0    0    0	(N
+   04:05.960    61490     +    0    0    0	(NOISE
+
+
+start 15:00
+end 20:00
+
+VT - ventricular tachycardia
+N - normal
+B - bigeminy

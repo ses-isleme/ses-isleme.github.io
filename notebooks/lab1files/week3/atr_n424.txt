@@ -1,0 +1,15 @@
+Time		Sample				event
+
+   00:00.004        1     +    0    0    0	(N
+   01:48.996    27249     +    0    0    0	(VFIB
+   03:34.692    53673     +    0    0    0	(NOISE
+   03:40.536    55134     +    0    0    0	(ASYS
+   03:53.152    58288     +    0    0    0	(NOD
+
+
+start 19:10
+end 24:10
+
+VFIB - ventricular fibrillation
+ASYS - asystole
+NOD - nodal rhythm

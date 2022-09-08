@@ -1,0 +1,22 @@
+Time		Sample				Event
+
+    0:00.004        1     +    0    0    0	(BI
+    1:32.460    23115     +    0    0    0	(NOISE
+    2:02.536    30634     +    0    0    0	(BI
+    2:07.692    31923     +    0    0    0	(VT
+    2:09.612    32403     +    0    0    0	(BI
+    2:24.384    36096     +    0    0    0	(BI
+    2:28.228    37057     +    0    0    0	(VFL
+    3:42.228    55557     +    0    0    0	(NOISE
+    3:53.228    58307     +    0    0    0	(VF
+    4:34.612    68653     +    0    0    0	(ASYS
+    4:48.076    72019     +    0    0    0	(SBR
+
+
+start 4:10
+end 9:10
+
+BI - ventricular begeminy
+VT - ventricular tachycardia
+ASYS - asystole
+SBR - sinus brady

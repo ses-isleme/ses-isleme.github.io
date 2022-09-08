@@ -1,0 +1,20 @@
+Time		Sample				Event
+
+    0:00.004        1     +    0    0    0	(BI
+   01:55.228    28807     +    0    0    0	(VFL
+   02:04.996    31249     +    0    0    0	(BI
+   03:24.420    51105     +    0    0    0	(VT
+   03:25.960    51490     +    0    0    0	(BI
+   03:27.576    51894     +    0    0    0	(VT
+   03:29.576    52394     +    0    0    0	(BI
+   03:52.112    58028     +    0    0    0	(NOISE
+   04:03.960    60990     +    0    0    0	(BI
+   04:15.112    63778     +    0    0    0	(VFL
+
+
+start 29:00
+end 34:00
+
+VFL - centricular flutter
+BI - ventricular bigeminy
+VT - ventricular tachycardia

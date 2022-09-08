@@ -1,0 +1,10 @@
+Time		Sample				Event
+
+    0:00.004        1     +    0    0    0	(N
+   01:45.728    26432     +    0    0    0	(VF
+
+
+start 9:00
+end 14:00
+
+VF - ventricular fibrillation

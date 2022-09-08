@@ -1,0 +1,79 @@
+Traceback (most recent call last):
+  File "/usr/local/anaconda3/envs/kitap/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/usr/local/anaconda3/envs/kitap/lib/python3.9/site-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/usr/local/anaconda3/envs/kitap/lib/python3.9/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/usr/local/anaconda3/envs/kitap/lib/python3.9/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/usr/local/anaconda3/envs/kitap/lib/python3.9/asyncio/base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "/usr/local/anaconda3/envs/kitap/lib/python3.9/site-packages/nbclient/client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "/usr/local/anaconda3/envs/kitap/lib/python3.9/site-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/usr/local/anaconda3/envs/kitap/lib/python3.9/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+def ucgen_kutu_pencere(N, alfa):
+  # kodunuz burada başlıyor
+
+  # kodunuz burada bitiyor
+  pass
+
+# Fonksiyonun kullanımı: kodun bu kısmını değiştirmeyiniz
+plt.figure(figsize=(10,6))
+plt.subplot(2,2,1)
+plt.stem(ucgen_kutu_pencere(N=20, alfa=0));plt.grid();plt.title('N=20, alfa = 0');
+plt.subplot(2,2,2)
+plt.stem(ucgen_kutu_pencere(N=21, alfa=1));plt.grid();plt.title('N=21, alfa = 1');
+plt.subplot(2,2,3)
+plt.stem(ucgen_kutu_pencere(N=15, alfa=0.5));plt.grid();plt.title('N=15, alfa = 0.5');
+plt.subplot(2,2,4)
+plt.stem(ucgen_kutu_pencere(N=16, alfa=0.7));plt.grid();plt.title('N=16, alfa = 0.7');
+print('Beklenen çıktı')
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mTypeError[0m                                 Traceback (most recent call last)
+Cell [0;32mIn [2], line 10[0m
+[1;32m      8[0m plt[38;5;241m.[39mfigure(figsize[38;5;241m=[39m([38;5;241m10[39m,[38;5;241m6[39m))
+[1;32m      9[0m plt[38;5;241m.[39msubplot([38;5;241m2[39m,[38;5;241m2[39m,[38;5;241m1[39m)
+[0;32m---> 10[0m [43mplt[49m[38;5;241;43m.[39;49m[43mstem[49m[43m([49m[43mucgen_kutu_pencere[49m[43m([49m[43mN[49m[38;5;241;43m=[39;49m[38;5;241;43m20[39;49m[43m,[49m[43m [49m[43malfa[49m[38;5;241;43m=[39;49m[38;5;241;43m0[39;49m[43m)[49m[43m)[49m;plt[38;5;241m.[39mgrid();plt[38;5;241m.[39mtitle([38;5;124m'[39m[38;5;124mN=20, alfa = 0[39m[38;5;124m'[39m);
+[1;32m     11[0m plt[38;5;241m.[39msubplot([38;5;241m2[39m,[38;5;241m2[39m,[38;5;241m2[39m)
+[1;32m     12[0m plt[38;5;241m.[39mstem(ucgen_kutu_pencere(N[38;5;241m=[39m[38;5;241m21[39m, alfa[38;5;241m=[39m[38;5;241m1[39m));plt[38;5;241m.[39mgrid();plt[38;5;241m.[39mtitle([38;5;124m'[39m[38;5;124mN=21, alfa = 1[39m[38;5;124m'[39m);
+
+File [0;32m/usr/local/anaconda3/envs/kitap/lib/python3.9/site-packages/matplotlib/pyplot.py:2883[0m, in [0;36mstem[0;34m(linefmt, markerfmt, basefmt, bottom, label, use_line_collection, orientation, data, *args)[0m
+[1;32m   2878[0m [38;5;129m@_copy_docstring_and_deprecators[39m(Axes[38;5;241m.[39mstem)
+[1;32m   2879[0m [38;5;28;01mdef[39;00m [38;5;21mstem[39m(
+[1;32m   2880[0m         [38;5;241m*[39margs, linefmt[38;5;241m=[39m[38;5;28;01mNone[39;00m, markerfmt[38;5;241m=[39m[38;5;28;01mNone[39;00m, basefmt[38;5;241m=[39m[38;5;28;01mNone[39;00m, bottom[38;5;241m=[39m[38;5;241m0[39m,
+[1;32m   2881[0m         label[38;5;241m=[39m[38;5;28;01mNone[39;00m, use_line_collection[38;5;241m=[39m[38;5;28;01mTrue[39;00m, orientation[38;5;241m=[39m[38;5;124m'[39m[38;5;124mvertical[39m[38;5;124m'[39m,
+[1;32m   2882[0m         data[38;5;241m=[39m[38;5;28;01mNone[39;00m):
+[0;32m-> 2883[0m     [38;5;28;01mreturn[39;00m [43mgca[49m[43m([49m[43m)[49m[38;5;241;43m.[39;49m[43mstem[49m[43m([49m
+[1;32m   2884[0m [43m        [49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[43mlinefmt[49m[38;5;241;43m=[39;49m[43mlinefmt[49m[43m,[49m[43m [49m[43mmarkerfmt[49m[38;5;241;43m=[39;49m[43mmarkerfmt[49m[43m,[49m[43m [49m[43mbasefmt[49m[38;5;241;43m=[39;49m[43mbasefmt[49m[43m,[49m
+[1;32m   2885[0m [43m        [49m[43mbottom[49m[38;5;241;43m=[39;49m[43mbottom[49m[43m,[49m[43m [49m[43mlabel[49m[38;5;241;43m=[39;49m[43mlabel[49m[43m,[49m
+[1;32m   2886[0m [43m        [49m[43muse_line_collection[49m[38;5;241;43m=[39;49m[43muse_line_collection[49m[43m,[49m
+[1;32m   2887[0m [43m        [49m[43morientation[49m[38;5;241;43m=[39;49m[43morientation[49m[43m,[49m
+[1;32m   2888[0m [43m        [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43m([49m[43m{[49m[38;5;124;43m"[39;49m[38;5;124;43mdata[39;49m[38;5;124;43m"[39;49m[43m:[49m[43m [49m[43mdata[49m[43m}[49m[43m [49m[38;5;28;43;01mif[39;49;00m[43m [49m[43mdata[49m[43m [49m[38;5;129;43;01mis[39;49;00m[43m [49m[38;5;129;43;01mnot[39;49;00m[43m [49m[38;5;28;43;01mNone[39;49;00m[43m [49m[38;5;28;43;01melse[39;49;00m[43m [49m[43m{[49m[43m}[49m[43m)[49m[43m)[49m
+
+File [0;32m/usr/local/anaconda3/envs/kitap/lib/python3.9/site-packages/matplotlib/__init__.py:1414[0m, in [0;36m_preprocess_data.<locals>.inner[0;34m(ax, data, *args, **kwargs)[0m
+[1;32m   1411[0m [38;5;129m@functools[39m[38;5;241m.[39mwraps(func)
+[1;32m   1412[0m [38;5;28;01mdef[39;00m [38;5;21minner[39m(ax, [38;5;241m*[39margs, data[38;5;241m=[39m[38;5;28;01mNone[39;00m, [38;5;241m*[39m[38;5;241m*[39mkwargs):
+[1;32m   1413[0m     [38;5;28;01mif[39;00m data [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
+[0;32m-> 1414[0m         [38;5;28;01mreturn[39;00m [43mfunc[49m[43m([49m[43max[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;28;43mmap[39;49m[43m([49m[43msanitize_sequence[49m[43m,[49m[43m [49m[43margs[49m[43m)[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+[1;32m   1416[0m     bound [38;5;241m=[39m new_sig[38;5;241m.[39mbind(ax, [38;5;241m*[39margs, [38;5;241m*[39m[38;5;241m*[39mkwargs)
+[1;32m   1417[0m     auto_label [38;5;241m=[39m (bound[38;5;241m.[39marguments[38;5;241m.[39mget(label_namer)
+[1;32m   1418[0m                   [38;5;129;01mor[39;00m bound[38;5;241m.[39mkwargs[38;5;241m.[39mget(label_namer))
+
+File [0;32m/usr/local/anaconda3/envs/kitap/lib/python3.9/site-packages/matplotlib/axes/_axes.py:2857[0m, in [0;36mAxes.stem[0;34m(self, linefmt, markerfmt, basefmt, bottom, label, use_line_collection, orientation, *args)[0m
+[1;32m   2855[0m [38;5;28;01mif[39;00m [38;5;28mlen[39m(args) [38;5;241m==[39m [38;5;241m1[39m:
+[1;32m   2856[0m     heads, [38;5;241m=[39m args
+[0;32m-> 2857[0m     locs [38;5;241m=[39m np[38;5;241m.[39marange([38;5;28;43mlen[39;49m[43m([49m[43mheads[49m[43m)[49m)
+[1;32m   2858[0m     args [38;5;241m=[39m ()
+[1;32m   2859[0m [38;5;28;01melif[39;00m [38;5;28misinstance[39m(args[[38;5;241m1[39m], [38;5;28mstr[39m):
+
+[0;31mTypeError[0m: object of type 'NoneType' has no len()
+TypeError: object of type 'NoneType' has no len()
+

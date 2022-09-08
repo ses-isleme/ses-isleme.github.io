@@ -1,0 +1,867 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Defter 1 konu sonu egzersizleri &#8212; Python Ile Ses İşlemeye Giriş</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.jpeg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Python Ile Ses İşlemeye Giriş</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="0_Giris.html">
+                    Python ile Ses İşlemeye Giriş
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python ile sayısal sinyal işlemeye giriş
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="1_TemelSinyaller_TemelIslemler.html">
+   1. Temel Sinyaller, Temel İşlemler
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sayısal Sistemler
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2_SayisalSistemlereGiris.html">
+   Sayısal Sistemlere Giriş
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3_ZDonusumuVeSistemler.html">
+   Z-Dönüşümü ve Sistemler
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Spektrum Analizi
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="4_SinyallerinFrekansSpektrumAnalizi.html">
+   Sinyal spektrum analizi
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5_MuzikSinyalleriSpektrumu.html">
+   Müzik sinyalleri spektrum analizi
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Müzik sinyali analiz: akustik öznitelikler
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="6_AkustikParam_LowLevelFeats.html">
+   Müzik sinyali akustik özniteliklere giriş
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="7_OtomatikEnstrumanTanima.html">
+   Akustik öznitelikler ile otomatik enstrüman tanıma
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Müzik ezgi boyutu analizi
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="8_EzgiAnalizi_FrekansKestirimi.html">
+   Temel titreşim frekans kestirimi
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="9_EntonasyonAnalizi.html">
+   Entonasyon Analizi
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Müzik ritim boyutu analizi
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="10_RitmikAnaliz.html">
+   Ritmik Analiz
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Ekler
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Ek1_PythonHizliTekrar.html">
+   Ek-1 Python Hızlı Tekrar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Ek2_NumpyHizliTekrar.html">
+   Ek-2 Numpy Hızlı Tekrar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Ek3_sayisalFiltreler.html">
+   Ek-3 Sayısal Filtreler
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/ses-isleme/ses-isleme.github.io/master?urlpath=tree/https://ses-isleme.github.io/notebooks/KonuSonuEgzersizleri_sorular.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/ses-isleme/ses-isleme.github.io"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/ses-isleme/ses-isleme.github.io/issues/new?title=Issue%20on%20page%20%2Fnotebooks/KonuSonuEgzersizleri_sorular.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/notebooks/KonuSonuEgzersizleri_sorular.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Defter 1 konu sonu egzersizleri
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defter-2-konu-sonu-egzersizleri">
+   Defter 2 konu sonu egzersizleri
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defter-3-konu-sonu-egzersizleri">
+   Defter 3 konu sonu egzersizleri
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defter-4-konu-sonu-egzersizleri">
+   Defter 4 konu sonu egzersizleri
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Defter 1 konu sonu egzersizleri</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Defter 1 konu sonu egzersizleri
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defter-2-konu-sonu-egzersizleri">
+   Defter 2 konu sonu egzersizleri
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defter-3-konu-sonu-egzersizleri">
+   Defter 3 konu sonu egzersizleri
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defter-4-konu-sonu-egzersizleri">
+   Defter 4 konu sonu egzersizleri
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">urllib.request</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">signal</span>
+<span class="kn">import</span> <span class="nn">numpy.polynomial.polynomial</span> <span class="k">as</span> <span class="nn">poly</span>
+<span class="kn">import</span> <span class="nn">soundfile</span> <span class="k">as</span> <span class="nn">sf</span>
+<span class="kn">import</span> <span class="nn">IPython</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Audio</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="defter-1-konu-sonu-egzersizleri">
+<h1>Defter 1 konu sonu egzersizleri<a class="headerlink" href="#defter-1-konu-sonu-egzersizleri" title="Permalink to this headline">#</a></h1>
+<p><strong>Egzersiz 1:</strong></p>
+<p>Pencere fonksiyonlarını ele alırken üçgen pencere (İng: triangular window) ve kutu pencere (İng: rectangular window) fonksiyonlarını ele almıştık. Bu iki pencerenin bileşimi bir pencere tanımlamak istiyoruz, öyle ki üçgene yakınlık düzeyi <span class="math notranslate nohighlight">\(\alpha\)</span> (<em>alfa</em>) parametresiyle kontrol edilebilsin. <span class="math notranslate nohighlight">\(alfa=1\)</span> için pencere üçgen pencereye eşit olmalı, <span class="math notranslate nohighlight">\(alfa=0\)</span> için kutu pencereye eşit olmalı ve bu değerler arasında bir değer aldığında pencerenin sol ve sağ uçları üçgen (çıkış ve iniş) ve ortası kutu pencereden gelecek şekilde oluşturulmalıdır. Fonksiyon tanımının altında çeşitli parametre kombinasyonları için elde edilen pencere fonksiyonları çizdirilmektedir. Şekli inceleyiniz ve kısmen yazılmış <em>ucgen_kutu_pencere()</em> fonksiyonunu kod çalıştırıldığında aynı şekiller elde edilecek şekilde tamamlayınız. Bu soru için scipy kütüphanesini kullanmayınız.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ucgen_kutu_pencere</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">alfa</span><span class="p">):</span>
+  <span class="c1"># kodunuz burada başlıyor</span>
+
+  <span class="c1"># kodunuz burada bitiyor</span>
+  <span class="k">pass</span>
+
+<span class="c1"># Fonksiyonun kullanımı: kodun bu kısmını değiştirmeyiniz</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">ucgen_kutu_pencere</span><span class="p">(</span><span class="n">N</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">alfa</span><span class="o">=</span><span class="mi">0</span><span class="p">));</span><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;N=20, alfa = 0&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">ucgen_kutu_pencere</span><span class="p">(</span><span class="n">N</span><span class="o">=</span><span class="mi">21</span><span class="p">,</span> <span class="n">alfa</span><span class="o">=</span><span class="mi">1</span><span class="p">));</span><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;N=21, alfa = 1&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">ucgen_kutu_pencere</span><span class="p">(</span><span class="n">N</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">alfa</span><span class="o">=</span><span class="mf">0.5</span><span class="p">));</span><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;N=15, alfa = 0.5&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">ucgen_kutu_pencere</span><span class="p">(</span><span class="n">N</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">alfa</span><span class="o">=</span><span class="mf">0.7</span><span class="p">));</span><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;N=16, alfa = 0.7&#39;</span><span class="p">);</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Beklenen çıktı&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">10</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">10</span> <span class="n">plt</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">ucgen_kutu_pencere</span><span class="p">(</span><span class="n">N</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">alfa</span><span class="o">=</span><span class="mi">0</span><span class="p">));</span><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;N=20, alfa = 0&#39;</span><span class="p">);</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="n">plt</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">ucgen_kutu_pencere</span><span class="p">(</span><span class="n">N</span><span class="o">=</span><span class="mi">21</span><span class="p">,</span> <span class="n">alfa</span><span class="o">=</span><span class="mi">1</span><span class="p">));</span><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;N=21, alfa = 1&#39;</span><span class="p">);</span>
+
+<span class="nn">File /usr/local/anaconda3/envs/kitap/lib/python3.9/site-packages/matplotlib/pyplot.py:2883,</span> in <span class="ni">stem</span><span class="nt">(linefmt, markerfmt, basefmt, bottom, label, use_line_collection, orientation, data, *args)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2878</span> <span class="nd">@_copy_docstring_and_deprecators</span><span class="p">(</span><span class="n">Axes</span><span class="o">.</span><span class="n">stem</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2879</span> <span class="k">def</span> <span class="nf">stem</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">2880</span>         <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">linefmt</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">markerfmt</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">basefmt</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">2881</span>         <span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">use_line_collection</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;vertical&#39;</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">2882</span>         <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">2883</span>     <span class="k">return</span> <span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">2884</span>         <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">linefmt</span><span class="o">=</span><span class="n">linefmt</span><span class="p">,</span> <span class="n">markerfmt</span><span class="o">=</span><span class="n">markerfmt</span><span class="p">,</span> <span class="n">basefmt</span><span class="o">=</span><span class="n">basefmt</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">2885</span>         <span class="n">bottom</span><span class="o">=</span><span class="n">bottom</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">2886</span>         <span class="n">use_line_collection</span><span class="o">=</span><span class="n">use_line_collection</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">2887</span>         <span class="n">orientation</span><span class="o">=</span><span class="n">orientation</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">2888</span>         <span class="o">**</span><span class="p">({</span><span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">}</span> <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="p">{}))</span>
+
+<span class="nn">File /usr/local/anaconda3/envs/kitap/lib/python3.9/site-packages/matplotlib/__init__.py:1414,</span> in <span class="ni">_preprocess_data.&lt;locals&gt;.inner</span><span class="nt">(ax, data, *args, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1411</span> <span class="nd">@functools</span><span class="o">.</span><span class="n">wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1412</span> <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1413</span>     <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1414</span>         <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="o">*</span><span class="nb">map</span><span class="p">(</span><span class="n">sanitize_sequence</span><span class="p">,</span> <span class="n">args</span><span class="p">),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1416</span>     <span class="n">bound</span> <span class="o">=</span> <span class="n">new_sig</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1417</span>     <span class="n">auto_label</span> <span class="o">=</span> <span class="p">(</span><span class="n">bound</span><span class="o">.</span><span class="n">arguments</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">label_namer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1418</span>                   <span class="ow">or</span> <span class="n">bound</span><span class="o">.</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">label_namer</span><span class="p">))</span>
+
+<span class="nn">File /usr/local/anaconda3/envs/kitap/lib/python3.9/site-packages/matplotlib/axes/_axes.py:2857,</span> in <span class="ni">Axes.stem</span><span class="nt">(self, linefmt, markerfmt, basefmt, bottom, label, use_line_collection, orientation, *args)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2855</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">2856</span>     <span class="n">heads</span><span class="p">,</span> <span class="o">=</span> <span class="n">args</span>
+<span class="ne">-&gt; </span><span class="mi">2857</span>     <span class="n">locs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">heads</span><span class="p">))</span>
+<span class="g g-Whitespace">   </span><span class="mi">2858</span>     <span class="n">args</span> <span class="o">=</span> <span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">2859</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nb">str</span><span class="p">):</span>
+
+<span class="ne">TypeError</span>: object of type &#39;NoneType&#39; has no len()
+</pre></div>
+</div>
+<img alt="../_images/KonuSonuEgzersizleri_sorular_3_1.png" src="../_images/KonuSonuEgzersizleri_sorular_3_1.png" />
+</div>
+</div>
+<p><strong>Egzersiz 2:</strong></p>
+<p><span class="math notranslate nohighlight">\(x[n] = Reel{((0.9 e^{j\pi/4})^n)}\)</span> sinyalinin örnek sayısı cinsinden periyodunu bulmanız istenmiştir. Sinyali olşturup birkaç periyod çizdiren bir kod parçası yazınız ve periyodu bulup aşağıdaki … yerine yazınız:</p>
+<p>T0 = … örnek</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># kodunuzu buraya yazınız</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Egzersiz 3:</strong></p>
+<p>1000 örnekleme frekansında 0.1 saniye uzunluğunda aşağıdaki sürekli zamanda tanımlanmış sinyalin örneklenmiş halini oluşturan ve çizdiren bir kod parçası yazınız.</p>
+<p>\begin{equation*}
+x(t) = sin(2\pi10t) + sin(2\pi400t)
+\end{equation*}</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># kodunuzu buraya yazınız</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Egzersiz 4:</strong></p>
+<p>Aşağıda bir ses sinyali <em>konusma_sinyali</em> isimli diziye okunmaktadır. Sinyalin 0.1 saniye ve 1.1 saniye arasındaki kısmını <em>x_n</em> isimli yeni bir diziye üçgen pencere ile pencerelenmiş olarak kopyalayan bir kod parçası yazınız. Üçgen pencere fonksiyonu hazır fonksiyonla yaratabilirsiniz: signal.get_window(‘triang’, uzunluk)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">link</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/MTG/sms-tools/raw/master/sounds/speech-male.wav&#39;</span>
+<span class="n">dosya_ismi</span> <span class="o">=</span> <span class="n">link</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">link</span><span class="p">,</span> <span class="n">dosya_ismi</span><span class="p">)</span>
+
+<span class="n">konusma_sinyali</span><span class="p">,</span> <span class="n">ornekleme_fr</span> <span class="o">=</span> <span class="n">sf</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">dosya_ismi</span><span class="p">)</span>
+
+<span class="c1"># kodunuz burada başlıyor</span>
+
+<span class="c1"># kodunuz burada bitiyor</span>
+
+<span class="n">Audio</span><span class="p">(</span><span class="n">x_n</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="n">ornekleme_fr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="defter-2-konu-sonu-egzersizleri">
+<h1>Defter 2 konu sonu egzersizleri<a class="headerlink" href="#defter-2-konu-sonu-egzersizleri" title="Permalink to this headline">#</a></h1>
+<p><strong>Egzersiz 5:</strong></p>
+<p><span class="math notranslate nohighlight">\(y[n] = 0.8 x[n] - 0.3 x[n-1] + 0.1 x[n-2]\)</span> sistemini gerçeklemek istiyorsunuz. Bu amaçla, giriş sinyalini sistemin dürtü cevabı ile  konvolüsyona tabi tutarak gerçekleştiren bir fonksiyon yazınız.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Dürtü cevabı kullanarak sistem gerçekleme</span>
+<span class="k">def</span> <span class="nf">egzersiz5_fonksiyon</span><span class="p">(</span><span class="n">x_n</span><span class="p">):</span>
+  <span class="c1"># kodunuz burada başlıyor</span>
+
+  <span class="c1"># kodunuz burada bitiyor</span>
+  <span class="k">pass</span>
+
+<span class="c1"># Fonksiyonun kullanımı: kodun bu kısmını değiştirmeyiniz</span>
+<span class="c1"># Sistemin keyfi seçilmiş bir sinyal ile test edilmesi</span>
+<span class="n">x_n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">y_n</span> <span class="o">=</span> <span class="n">egzersiz5_fonksiyon</span><span class="p">(</span><span class="n">x_n</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span><span class="n">plt</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">x_n</span><span class="p">);</span><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;x[n]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span><span class="n">plt</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">y_n</span><span class="p">);</span><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;y[n]&#39;</span><span class="p">);</span>
+<span class="c1"># Fonksiyonu doğru bir şekilde tamamlayıp bu hücreyi çalıştırdığınızda alttakine benzer bir şekil oluşmalıdır</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;y[n]&#39;)
+</pre></div>
+</div>
+<img alt="../_images/KonuSonuEgzersizleri_sorular_12_1.png" src="../_images/KonuSonuEgzersizleri_sorular_12_1.png" />
+</div>
+</div>
+<p><strong>Egzersiz 6:</strong></p>
+<p>Bir hareketli ortalama sistemi şu şekilde tanımlanmıştır:</p>
+<p>\begin{equation}
+y[n] = \frac{1}{2M+1} \sum_{k = -M}^{M} x[n-k]
+\end{equation}</p>
+<p><span class="math notranslate nohighlight">\(M\)</span>’in farklı değerleri için ([5, 15, 25]) sistemin genlik spektrumunun nasıl değiştiğini gözlemek istiyoruz. Bunu için bir kod parçası yazınız.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># kodunuzu buraya yazınız</span>
+
+<span class="c1"># Kodunuz alttakine benzer bir şekil oluşturmalıdır</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;|H(w)| dB&#39;)
+</pre></div>
+</div>
+<img alt="../_images/KonuSonuEgzersizleri_sorular_14_1.png" src="../_images/KonuSonuEgzersizleri_sorular_14_1.png" />
+</div>
+</div>
+<p><strong>Egzersiz 7:</strong></p>
+<p>\begin{equation}
+H(e^{j\omega}) = \frac{1-0.25e^{-j\omega}+0.15e^{-2j\omega}}{1-0.5e^{-j\omega}-0.2e^{-2j\omega}}
+\end{equation}
+sisteminin genlik frekans cevabını çizdiren bir kod parçası yazınız.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># kodunuzu buraya yazınız</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Egzersiz 8:</strong></p>
+<p>Aşağıdaki denklem ile tanımlanmış sistemin frekans cevabını çizdiren bir kod parçası yazınız:</p>
+<p><span class="math notranslate nohighlight">\(y[n]-0.5y[n-1]-0.2y[n-2]=x[n]-0.25x[n-1]+0.15x[n-2]\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># kodunuzu buraya yazınız</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Egzersiz 9:</strong></p>
+<p>\begin{equation}
+y[n] = x[n] - 0.25 x[n-1]
+\end{equation}</p>
+<p>denklemiyle tanımlanan sistemin ve bu sistemin tersi olan sistemin genlik frekans cevabını aynı figürde çizdiren bir kod parçası yazınız.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kodunuzu buraya yazınız</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="defter-3-konu-sonu-egzersizleri">
+<h1>Defter 3 konu sonu egzersizleri<a class="headerlink" href="#defter-3-konu-sonu-egzersizleri" title="Permalink to this headline">#</a></h1>
+<p><strong>Egzersiz 10:</strong></p>
+<p>Aşağıda bir sayısal sistemin z-transformu verilmiştir. Sistem nedenseldir (‘causal’). <strong>Bu sistem için aşağıdaki sorular verilmiştir. Python kodu ile gerekli analiz ve çizimleri yaptırarak ve metin kutusuna yorum yazarak cevaplayınız</strong></p>
+<ul class="simple">
+<li><p><strong>a)</strong> Z-tranform kutup ve sıfırlarını buldurup z-uzayında çizdiriniz.</p></li>
+<li><p><strong>b)</strong> Sistemin frekans cevabını çizdiriniz</p></li>
+<li><p><strong>c)</strong> Kutupların açısından yola çıkarak filtredeki rezonansların merkezi frekanslarını bulunuz.</p></li>
+<li><p><strong>d)</strong> Bu sisteme girdi olarak bir x[n] oluşturunuz. Bu x[n] 1000 Hz örnekleme frekansında örneklenmeli, 0.1 saniye uzunluğunda ve iki sinüs dalgasının toplamı şeklinde olmalı. Bu iki sinüsün frekanslarını öyle seçin ki sistem sinüslerden birinin genliğini yükseltirken diğerininkini azaltsın. Frekans seçimini nasıl yaptığınızı sistemin frekans cevabı ile ilişkilendirerek açıklayınız. Giriş sinyalini filtreden geçirerek çıkış sinyali oluşturunuz.Giriş ve çıkış sinyallerini çizdiriniz. Sonucu yorumlayınız: hangi bileşenin genliği artıp hangisininki azaldı, neden?</p></li>
+</ul>
+<p>\begin{equation}
+H(z) = \frac{1}{1 - 1.34350288 z^{-1} + 0.9025 z^{-2} }
+\end{equation}</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># İsterseniz bu hücreye kullanmayı planladığınız bazı fonksiyon tanımlarını yerleştirebilirsiniz</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Cevap 10-a)</span>
+<span class="c1"># Kodunuzu buraya yazınız</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Cevap 10-b) </span>
+<span class="c1"># Kodunuzu buraya yazınız</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Cevap 10-c) </span>
+<span class="c1"># Kodunuzu buraya yazınız</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Cevap 10-d) </span>
+<span class="c1"># Kodunuzu buraya yazınız</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="defter-4-konu-sonu-egzersizleri">
+<h1>Defter 4 konu sonu egzersizleri<a class="headerlink" href="#defter-4-konu-sonu-egzersizleri" title="Permalink to this headline">#</a></h1>
+<p><strong>Ezgersiz 11:</strong></p>
+<p>Aşağıda bir dosyadan 10000 Hz örnekleme frekansında bir harmonik sinyal okunmaktadır. Frekans uzayında filtreleme işlemi için sinyalin spektrumunu hesaplayan, ardından spektrumda ilgili bölgeleri değiştiren ve çıktı sinyalini ters Fourier dönüşümü ile elde eden bir fonksiyon tanımlayınız. Bu fonksiyonu, sinyalde 2000 Hz - 3000 Hz arasındaki bileşenlerin genliklerini sıfırlamak için kullanınız. Yaptığınız işlemin sonucu kontrol amacıyla, girdi sinyali ve çıktı sinyalinin genlik spektrumunu üstüste çizdiren bir kod parçası yazınız.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Test sinyali: Sentetik harmonik sinyal </span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/barisbozkurt/dataDumpForCourses/master/harmonic_signal.txt&#39;</span>
+<span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="s1">&#39;harmonic_signal.txt&#39;</span><span class="p">)</span>
+<span class="n">test_sinyali_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;harmonic_signal.txt&#39;</span><span class="p">)</span>
+<span class="n">test_sinyali_1_ornekleme_fr</span> <span class="o">=</span> <span class="mi">10000</span> <span class="c1"># Örnekleme frekansı Hz</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">frekans_uzayinda_filtrele</span><span class="p">(</span><span class="n">x_n</span><span class="p">,</span> <span class="n">dusuk_kesim_fr</span><span class="p">,</span> <span class="n">yuksek_kesim_fr</span><span class="p">,</span> <span class="n">ornekleme_fr</span><span class="p">,</span> <span class="n">carpan</span><span class="p">):</span>
+  <span class="c1"># kodunuz burada başlıyor</span>
+
+  <span class="c1"># kodunuz burada bitiyor</span>
+  <span class="k">pass</span>
+
+<span class="c1"># Fonksiyonun kullanımı: kodun bu kısmını değiştirmeyiniz</span>
+<span class="c1"># Tanımlanan fonksiyonun kullanılması</span>
+<span class="n">dusuk_kesim_fr</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">;</span> <span class="n">yuksek_kesim_fr</span> <span class="o">=</span> <span class="mi">3000</span><span class="p">;</span> 
+<span class="n">carpan</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">test_sinyali_1_filtrelenmis</span> <span class="o">=</span> <span class="n">frekans_uzayinda_filtrele</span><span class="p">(</span><span class="n">test_sinyali_1</span><span class="p">,</span> <span class="n">dusuk_kesim_fr</span><span class="p">,</span> <span class="n">yuksek_kesim_fr</span><span class="p">,</span> <span class="n">test_sinyali_1_ornekleme_fr</span><span class="p">,</span> <span class="n">carpan</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Spektrumları üstüste çizdiren kodu buraya yazınız</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Barış Bozkurt (yazar) ve Ahmet Uysal (editör)<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

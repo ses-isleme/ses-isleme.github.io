@@ -1,0 +1,46 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: notebooks/0_Giris
+parts:
+- caption: Python ile sayısal sinyal işlemeye giriş
+  chapters:
+  - file: notebooks/1_TemelSinyaller_TemelIslemler
+    title: Temel Sinyaller, Temel İşlemler
+- caption: Sayısal Sistemler
+  chapters:
+  - file: notebooks/2_SayisalSistemlereGiris
+    title: Sayısal Sistemlere Giriş
+  - file: notebooks/3_ZDonusumuVeSistemler
+    title: Z-Dönüşümü ve Sistemler
+- caption: Spektrum Analizi
+  chapters:
+  - file: notebooks/4_SinyallerinFrekansSpektrumAnalizi
+    title: Sinyal spektrum analizi
+  - file: notebooks/5_MuzikSinyalleriSpektrumu
+    title: Müzik sinyalleri spektrum analizi
+- caption: 'Müzik sinyali analiz: akustik öznitelikler'
+  chapters:
+  - file: notebooks/6_AkustikParam_LowLevelFeats
+    title: Müzik sinyali akustik özniteliklere giriş
+  - file: notebooks/7_OtomatikEnstrumanTanima
+    title: Akustik öznitelikler ile otomatik enstrüman tanıma
+- caption: Müzik ezgi boyutu analizi
+  chapters:
+  - file: notebooks/8_EzgiAnalizi_FrekansKestirimi
+    title: Temel titreşim frekans kestirimi
+  - file: notebooks/9_EntonasyonAnalizi
+    title: Entonasyon Analizi
+- caption: Müzik ritim boyutu analizi
+  chapters:
+  - file: notebooks/10_RitmikAnaliz
+    title: Ritmik Analiz
+- caption: Ekler
+  chapters:
+  - file: notebooks/Ek1_PythonHizliTekrar
+    title: Ek-1 Python Hızlı Tekrar
+  - file: notebooks/Ek2_NumpyHizliTekrar
+    title: Ek-2 Numpy Hızlı Tekrar 
+  - file: notebooks/Ek3_sayisalFiltreler
+    title: Ek-3 Sayısal Filtreler 
