@@ -5,34 +5,40 @@ format: jb-book
 root: notebooks/0_Giris
 parts:
 - caption: Python ile sayısal sinyal işlemeye giriş
+  numbered: true
   chapters:
   - file: notebooks/1_TemelSinyaller_TemelIslemler
     title: Temel Sinyaller, Temel İşlemler
 - caption: Sayısal Sistemler
+  numbered: true
   chapters:
   - file: notebooks/2_SayisalSistemlereGiris
     title: Sayısal Sistemlere Giriş
   - file: notebooks/3_ZDonusumuVeSistemler
     title: Z-Dönüşümü ve Sistemler
 - caption: Spektrum Analizi
+  numbered: true
   chapters:
   - file: notebooks/4_SinyallerinFrekansSpektrumAnalizi
     title: Sinyal spektrum analizi
   - file: notebooks/5_MuzikSinyalleriSpektrumu
     title: Müzik sinyalleri spektrum analizi
 - caption: 'Müzik sinyali analiz: akustik öznitelikler'
+  numbered: true
   chapters:
   - file: notebooks/6_AkustikParam_LowLevelFeats
     title: Müzik sinyali akustik özniteliklere giriş
   - file: notebooks/7_OtomatikEnstrumanTanima
     title: Akustik öznitelikler ile otomatik enstrüman tanıma
 - caption: Müzik ezgi boyutu analizi
+  numbered: true
   chapters:
   - file: notebooks/8_EzgiAnalizi_FrekansKestirimi
     title: Temel titreşim frekans kestirimi
   - file: notebooks/9_EntonasyonAnalizi
     title: Entonasyon Analizi
 - caption: Müzik ritim boyutu analizi
+  numbered: true
   chapters:
   - file: notebooks/10_RitmikAnaliz
     title: Ritmik Analiz

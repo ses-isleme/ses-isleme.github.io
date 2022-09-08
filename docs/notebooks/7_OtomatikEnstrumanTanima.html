@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>4b) Akustik Öznitelikler ile Otomatik Enstrüman Tanıma &#8212; Python Ile Ses İşlemeye Giriş</title>
+    <title>7. Akustik Öznitelikler ile Otomatik Enstrüman Tanıma &#8212; Python Ile Ses İşlemeye Giriş</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,24 +52,14 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5a) Ezgi Analizi - Temel titreşim frekans kestirimi" href="8_EzgiAnalizi_FrekansKestirimi.html" />
-    <link rel="prev" title="4a) Akustik Parametreler, Düşük Seviyeli Öznitelikler" href="6_AkustikParam_LowLevelFeats.html" />
+    <link rel="next" title="8. Ezgi Analizi - Temel titreşim frekans kestirimi" href="8_EzgiAnalizi_FrekansKestirimi.html" />
+    <link rel="prev" title="6. Akustik Parametreler, Düşük Seviyeli Öznitelikler" href="6_AkustikParam_LowLevelFeats.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
 
     <!-- Google Analytics -->
     
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
-<script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-196606878-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
-
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
 <!-- Checkboxes to toggle the left sidebar -->
@@ -143,12 +133,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="2_SayisalSistemlereGiris.html">
-   Sayısal Sistemlere Giriş
+   2. Sayısal Sistemlere Giriş
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="3_ZDonusumuVeSistemler.html">
-   Z-Dönüşümü ve Sistemler
+   3. Z-Dönüşümü ve Sistemler
   </a>
  </li>
 </ul>
@@ -160,12 +150,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="4_SinyallerinFrekansSpektrumAnalizi.html">
-   Sinyal spektrum analizi
+   4. Sinyal spektrum analizi
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="5_MuzikSinyalleriSpektrumu.html">
-   Müzik sinyalleri spektrum analizi
+   5. Müzik sinyalleri spektrum analizi
   </a>
  </li>
 </ul>
@@ -177,12 +167,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="6_AkustikParam_LowLevelFeats.html">
-   Müzik sinyali akustik özniteliklere giriş
+   6. Müzik sinyali akustik özniteliklere giriş
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Akustik öznitelikler ile otomatik enstrüman tanıma
+   7. Akustik öznitelikler ile otomatik enstrüman tanıma
   </a>
  </li>
 </ul>
@@ -194,12 +184,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="8_EzgiAnalizi_FrekansKestirimi.html">
-   Temel titreşim frekans kestirimi
+   8. Temel titreşim frekans kestirimi
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="9_EntonasyonAnalizi.html">
-   Entonasyon Analizi
+   9. Entonasyon Analizi
   </a>
  </li>
 </ul>
@@ -211,7 +201,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="10_RitmikAnaliz.html">
-   Ritmik Analiz
+   10. Ritmik Analiz
   </a>
  </li>
 </ul>
@@ -444,49 +434,49 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#otomatik-ses-siniflandirma">
-   Otomatik ses sınıflandırma
+   7.1. Otomatik ses sınıflandırma
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bolum-organizasyonu">
-   Bölüm organizasyonu
+   7.2. Bölüm organizasyonu
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ham-verinin-toplanip-incelenmesi">
-   Ham verinin toplanıp incelenmesi
+   7.3. Ham verinin toplanıp incelenmesi
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#ham-verilerin-on-incelemesi-ve-on-islemesi">
-     Ham verilerin ön incelemesi ve ön işlemesi
+     7.3.1. Ham verilerin ön incelemesi ve ön işlemesi
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#ham-veri-on-isleme-bolutleme-ve-normalizasyon-islemleri">
-     Ham veri ön işleme: Bölütleme ve normalizasyon işlemleri
+     7.3.2. Ham veri ön işleme: Bölütleme ve normalizasyon işlemleri
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#oznitelik-cikarimi">
-   Öznitelik çıkarımı
+   7.4. Öznitelik çıkarımı
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#ozniteliklerin-incelenmesi-ve-on-islemesi">
-     Özniteliklerin incelenmesi ve ön işlemesi
+     7.4.1. Özniteliklerin incelenmesi ve ön işlemesi
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#ozniteliklerin-on-islemesi">
-     Özniteliklerin ön işlemesi
+     7.4.2. Özniteliklerin ön işlemesi
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#veri-ornek-sayisini-dengeleme">
-       Veri örnek sayısını dengeleme
+       7.4.2.1. Veri örnek sayısını dengeleme
       </a>
      </li>
     </ul>
@@ -495,34 +485,34 @@ title="Print to PDF"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#otomatik-siniflandirici-egitimi-ve-testi">
-   Otomatik sınıflandırıcı eğitimi ve testi
+   7.5. Otomatik sınıflandırıcı eğitimi ve testi
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#oznitelikler-ve-etiketler-icin-matrislerin-formatlanmasi">
-     Öznitelikler ve etiketler için matrislerin formatlanması
+     7.5.1. Öznitelikler ve etiketler için matrislerin formatlanması
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#verinin-egitim-ve-test-alt-kumelerine-bolunmesi">
-     Verinin eğitim ve test alt-kümelerine bölünmesi
+     7.5.2. Verinin eğitim ve test alt-kümelerine bölünmesi
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#birden-fazla-siniflandiricinin-karsilastirilmasi">
-     Birden fazla sınıflandırıcının karşılaştırılması
+     7.5.3. Birden fazla sınıflandırıcının karşılaştırılması
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#peki-derin-ogrenme-modellerini-kullanabilir-miyiz">
-     Peki derin öğrenme modellerini kullanabilir miyiz?
+     7.5.4. Peki derin öğrenme modellerini kullanabilir miyiz?
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#egzersiz-odev">
-   Egzersiz/Ödev
+   7.6. Egzersiz/Ödev
   </a>
  </li>
 </ul>
@@ -534,7 +524,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>4b) Akustik Öznitelikler ile Otomatik Enstrüman Tanıma</h1>
+                <h1>Akustik Öznitelikler ile Otomatik Enstrüman Tanıma</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -546,49 +536,49 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#otomatik-ses-siniflandirma">
-   Otomatik ses sınıflandırma
+   7.1. Otomatik ses sınıflandırma
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bolum-organizasyonu">
-   Bölüm organizasyonu
+   7.2. Bölüm organizasyonu
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ham-verinin-toplanip-incelenmesi">
-   Ham verinin toplanıp incelenmesi
+   7.3. Ham verinin toplanıp incelenmesi
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#ham-verilerin-on-incelemesi-ve-on-islemesi">
-     Ham verilerin ön incelemesi ve ön işlemesi
+     7.3.1. Ham verilerin ön incelemesi ve ön işlemesi
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#ham-veri-on-isleme-bolutleme-ve-normalizasyon-islemleri">
-     Ham veri ön işleme: Bölütleme ve normalizasyon işlemleri
+     7.3.2. Ham veri ön işleme: Bölütleme ve normalizasyon işlemleri
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#oznitelik-cikarimi">
-   Öznitelik çıkarımı
+   7.4. Öznitelik çıkarımı
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#ozniteliklerin-incelenmesi-ve-on-islemesi">
-     Özniteliklerin incelenmesi ve ön işlemesi
+     7.4.1. Özniteliklerin incelenmesi ve ön işlemesi
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#ozniteliklerin-on-islemesi">
-     Özniteliklerin ön işlemesi
+     7.4.2. Özniteliklerin ön işlemesi
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#veri-ornek-sayisini-dengeleme">
-       Veri örnek sayısını dengeleme
+       7.4.2.1. Veri örnek sayısını dengeleme
       </a>
      </li>
     </ul>
@@ -597,34 +587,34 @@ title="Print to PDF"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#otomatik-siniflandirici-egitimi-ve-testi">
-   Otomatik sınıflandırıcı eğitimi ve testi
+   7.5. Otomatik sınıflandırıcı eğitimi ve testi
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#oznitelikler-ve-etiketler-icin-matrislerin-formatlanmasi">
-     Öznitelikler ve etiketler için matrislerin formatlanması
+     7.5.1. Öznitelikler ve etiketler için matrislerin formatlanması
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#verinin-egitim-ve-test-alt-kumelerine-bolunmesi">
-     Verinin eğitim ve test alt-kümelerine bölünmesi
+     7.5.2. Verinin eğitim ve test alt-kümelerine bölünmesi
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#birden-fazla-siniflandiricinin-karsilastirilmasi">
-     Birden fazla sınıflandırıcının karşılaştırılması
+     7.5.3. Birden fazla sınıflandırıcının karşılaştırılması
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#peki-derin-ogrenme-modellerini-kullanabilir-miyiz">
-     Peki derin öğrenme modellerini kullanabilir miyiz?
+     7.5.4. Peki derin öğrenme modellerini kullanabilir miyiz?
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#egzersiz-odev">
-   Egzersiz/Ödev
+   7.6. Egzersiz/Ödev
   </a>
  </li>
 </ul>
@@ -637,11 +627,11 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="b-akustik-oznitelikler-ile-otomatik-enstruman-tanima">
-<h1>4b) Akustik Öznitelikler ile Otomatik Enstrüman Tanıma<a class="headerlink" href="#b-akustik-oznitelikler-ile-otomatik-enstruman-tanima" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="akustik-oznitelikler-ile-otomatik-enstruman-tanima">
+<h1><span class="section-number">7. </span>Akustik Öznitelikler ile Otomatik Enstrüman Tanıma<a class="headerlink" href="#akustik-oznitelikler-ile-otomatik-enstruman-tanima" title="Permalink to this headline">#</a></h1>
 <p><a href="https://colab.research.google.com/drive/1I3T54-1S0surU6GwY08ESJ65b1V6Sz8H?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
 <section id="otomatik-ses-siniflandirma">
-<h2>Otomatik ses sınıflandırma<a class="headerlink" href="#otomatik-ses-siniflandirma" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">7.1. </span>Otomatik ses sınıflandırma<a class="headerlink" href="#otomatik-ses-siniflandirma" title="Permalink to this headline">#</a></h2>
 <p>Otomatik ses sınıflandırma, verilen bir ses kaydının  tanımlanmış kategorilerden hangisine ait olduğunun otomatik bulunması işlemidir ve giderek artan sayıda uygulamada kullanılmaktadır. Bu uygulamalara örnek olarak <a class="reference external" href="https://paperswithcode.com/task/environmental-sound-classification">çevresel ses sınıflandırma</a>, <a class="reference external" href="https://paperswithcode.com/task/speech-recognition">konuşma tanıma</a> (bu problemde kaydın küçük kesitleri sınıflandırılmaktadır), <a class="reference external" href="https://paperswithcode.com/task/ecg-classification">hastalık tespiti için kalp sesi sınıflandırması</a> gibi örnekler verilebilir. Bu bölümde amacımız otomatik enstrüman sesi sınıflandırması problemi üzerinden otomatik ses sınıflandırması sistem tasarımı problemini ele almak ve ilgili okuyuculara bu konu için bir başlangıç noktası sağlamaktır. İçerik, araştırma materyalinden çok eğitim materyali olarak düşünülmelidir. Bu konudaki güncel araştırmalara ulaşmak için <a class="reference external" href="https://scholar.google.com/scholar?as_ylo=2017&amp;q=musical+instrument+classification&amp;hl=en&amp;as_sdt=0,5">Google Scholar</a> üzerinden makalelere erişmenizi ve incelemenizi öneririz.</p>
 <p>Herhangi bir makine öğrenmesi problemini ele alırken öncelikle aşağıdaki adımları izlemeliyiz:</p>
 <ul class="simple">
@@ -663,7 +653,7 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="bolum-organizasyonu">
-<h2>Bölüm organizasyonu<a class="headerlink" href="#bolum-organizasyonu" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">7.2. </span>Bölüm organizasyonu<a class="headerlink" href="#bolum-organizasyonu" title="Permalink to this headline">#</a></h2>
 <p>Daha kolay takip edilebilmesi için bölümü üç aşamaya ayırdık.</p>
 <ol class="simple">
 <li><p><strong>Veri inceleme ve ön işleme:</strong> Öncelikle verileri indirip inceleyecek, içeriğini anlamaya çalışacak ve testlerde kullanılabilmesi için bir dizi ön işleme adımına tabi tutacağız. Veriler üzerine inceleme yapmak problemin doğasını anlamak için kullanılmasını şiddetle tavsiye ettiğimiz bir yöntemdir. Uygun temsillerin ve modellerin seçilebilmesi için önemli bir gerekliliktir.</p></li>
@@ -694,23 +684,14 @@ np.random.seed(0)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">13</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="k">if</span> <span class="n">importlib</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">find_spec</span><span class="p">(</span><span class="s1">&#39;essentia&#39;</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span>   <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;pip install essentia&#39;</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="kn">import</span> <span class="nn">essentia.standard</span> <span class="k">as</span> <span class="nn">ess</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="c1"># Rasgelelik kontrolü için &#39;seed&#39; ekleyelim</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;essentia&#39;
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[   INFO   ] MusicExtractorSVM: no classifier models were configured by default
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="ham-verinin-toplanip-incelenmesi">
-<h2>Ham verinin toplanıp incelenmesi<a class="headerlink" href="#ham-verinin-toplanip-incelenmesi" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">7.3. </span>Ham verinin toplanıp incelenmesi<a class="headerlink" href="#ham-verinin-toplanip-incelenmesi" title="Permalink to this headline">#</a></h2>
 <p><strong>Dosyaların indirilmesi:</strong>
 Öncelikle internetten zip dosyalarını indirip içindekileri ‘instrument’ isimli bir klasörde toplayalım.</p>
 <div class="cell docutils container">
@@ -750,6 +731,62 @@ np.random.seed(0)
     <span class="n">zip_ref</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">dosya_ismi</span><span class="p">)</span>  <span class="c1"># açılmış zip dosyasının silinmesi</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Veri indirildi, açıldı ve yerleştirildi: &#39;</span><span class="p">,</span> <span class="n">hedef_klasor</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_33015</span><span class="o">/</span><span class="mf">2020053402.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">24</span>         <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">hedef_klasor</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">25</span>     <span class="n">dosya_ismi</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="ne">---&gt; </span><span class="mi">26</span>     <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">dosya_ismi</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">27</span>     <span class="c1"># Zip dosyasının açılması</span>
+<span class="g g-Whitespace">     </span><span class="mi">28</span>     <span class="n">zip_ref</span> <span class="o">=</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="n">dosya_ismi</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+
+<span class="nn">~/miniconda3/envs/KitapYazim/lib/python3.9/urllib/request.py</span> in <span class="ni">urlretrieve</span><span class="nt">(url, filename, reporthook, data)</span>
+<span class="g g-Whitespace">    </span><span class="mi">266</span> 
+<span class="g g-Whitespace">    </span><span class="mi">267</span>             <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">268</span>                 <span class="n">block</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">bs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">269</span>                 <span class="k">if</span> <span class="ow">not</span> <span class="n">block</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">270</span>                     <span class="k">break</span>
+
+<span class="nn">~/miniconda3/envs/KitapYazim/lib/python3.9/http/client.py</span> in <span class="ni">read</span><span class="nt">(self, amt)</span>
+<span class="g g-Whitespace">    </span><span class="mi">461</span>             <span class="c1"># Amount is given, implement using readinto</span>
+<span class="g g-Whitespace">    </span><span class="mi">462</span>             <span class="n">b</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">amt</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">463</span>             <span class="n">n</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">readinto</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">464</span>             <span class="k">return</span> <span class="nb">memoryview</span><span class="p">(</span><span class="n">b</span><span class="p">)[:</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">tobytes</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">465</span>         <span class="k">else</span><span class="p">:</span>
+
+<span class="nn">~/miniconda3/envs/KitapYazim/lib/python3.9/http/client.py</span> in <span class="ni">readinto</span><span class="nt">(self, b)</span>
+<span class="g g-Whitespace">    </span><span class="mi">505</span>         <span class="c1"># connection, and the user is reading more bytes than will be provided</span>
+<span class="g g-Whitespace">    </span><span class="mi">506</span>         <span class="c1"># (for example, reading in 1k chunks)</span>
+<span class="ne">--&gt; </span><span class="mi">507</span>         <span class="n">n</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fp</span><span class="o">.</span><span class="n">readinto</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">508</span>         <span class="k">if</span> <span class="ow">not</span> <span class="n">n</span> <span class="ow">and</span> <span class="n">b</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">509</span>             <span class="c1"># Ideally, we would raise IncompleteRead if the content-length</span>
+
+<span class="nn">~/miniconda3/envs/KitapYazim/lib/python3.9/socket.py</span> in <span class="ni">readinto</span><span class="nt">(self, b)</span>
+<span class="g g-Whitespace">    </span><span class="mi">702</span>         <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">703</span>             <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">704</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sock</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">705</span>             <span class="k">except</span> <span class="n">timeout</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">706</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_timeout_occurred</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="nn">~/miniconda3/envs/KitapYazim/lib/python3.9/ssl.py</span> in <span class="ni">recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1239</span>                   <span class="s2">&quot;non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span>
+<span class="g g-Whitespace">   </span><span class="mi">1240</span>                   <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1241</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">nbytes</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1242</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1243</span>             <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">nbytes</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+
+<span class="nn">~/miniconda3/envs/KitapYazim/lib/python3.9/ssl.py</span> in <span class="ni">read</span><span class="nt">(self, len, buffer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1097</span>         <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1098</span>             <span class="k">if</span> <span class="n">buffer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1099</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1100</span>             <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1101</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
 </div>
 </div>
@@ -852,7 +889,7 @@ np.random.seed(0)
 <p><img alt="Akış 2" src="https://github.com/barisbozkurt/dataDumpForCourses/raw/master/cizimler/SiniflandirmaProblemiGenelAkis_2.png" /></p>
 <p>Şekil 7.2: Otomatik sınıflandırıcı tasarımı ara adımları</p>
 <section id="ham-verilerin-on-incelemesi-ve-on-islemesi">
-<h3>Ham verilerin ön incelemesi ve ön işlemesi<a class="headerlink" href="#ham-verilerin-on-incelemesi-ve-on-islemesi" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.3.1. </span>Ham verilerin ön incelemesi ve ön işlemesi<a class="headerlink" href="#ham-verilerin-on-incelemesi-ve-on-islemesi" title="Permalink to this headline">#</a></h3>
 <p>İlk olarak bazı örnekleri çizdirip incelemekte fayda var. İşe başlamadan mutlaka verinin içerisinde ne olduğuna bakılıp ön işleme adımlarını tanımlamak gerekir. Her enstrümandan birer örnek çizdirip inceleyelim.
 Örnekleme frekansı olarak standart <a class="reference external" href="https://en.wikipedia.org/wiki/Compact_Disc_Digital_Audio">audio-CD formatı</a>ndaki gibi 44100Hz seçelim.</p>
 <div class="cell docutils container">
@@ -928,7 +965,7 @@ np.random.seed(0)
 <p>Bölütleme işlemi için sessizlik kısımlarını tespit etmemiz gerekiyor. Bunun için sinyali küçük kesitlere bölüp her bir kesitin sessizlik olup olmadığına karar vermeliyiz. Bu işlem için bölütlerin enerjilerini belirlediğimiz bir eşik değeri ile kıyaslayabiliriz.</p>
 </section>
 <section id="ham-veri-on-isleme-bolutleme-ve-normalizasyon-islemleri">
-<h3>Ham veri ön işleme: Bölütleme ve normalizasyon işlemleri<a class="headerlink" href="#ham-veri-on-isleme-bolutleme-ve-normalizasyon-islemleri" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.3.2. </span>Ham veri ön işleme: Bölütleme ve normalizasyon işlemleri<a class="headerlink" href="#ham-veri-on-isleme-bolutleme-ve-normalizasyon-islemleri" title="Permalink to this headline">#</a></h3>
 <p>Verinin yapısına, içeriğine ve etiketlerine bağlı olarak yapılması gereken birçok işlem olabilir. Altta önce bölütleme, sonra da genlik normalizasyonu işlemlerini ele alacağız.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1108,7 +1145,7 @@ np.random.seed(0)
 </section>
 </section>
 <section id="oznitelik-cikarimi">
-<h2>Öznitelik çıkarımı<a class="headerlink" href="#oznitelik-cikarimi" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">7.4. </span>Öznitelik çıkarımı<a class="headerlink" href="#oznitelik-cikarimi" title="Permalink to this headline">#</a></h2>
 <p>Şimdi bölütlenmiş her bir ses dosyası için öznitelikler hesaplayıp kategori/etiket/enstrüman bilgisi ile beraber tek bir veri dosyası içerisine yazabiliriz. Öznitelik çıkarımı için Essentia kütüphanesinin <a class="reference external" href="https://essentia.upf.edu/documentation/reference/std_MusicExtractor.html">MusicExtractor</a> fonksiyonunu kullanacağız.</p>
 <p>Öncelikle tek bir dosya için çalıştırıp verdiği çıktıyı inceleyelim:</p>
 <div class="cell docutils container">
@@ -1282,7 +1319,7 @@ lowlevel.zerocrossingrate.stdev
 </div>
 </div>
 <section id="ozniteliklerin-incelenmesi-ve-on-islemesi">
-<h3>Özniteliklerin incelenmesi ve ön işlemesi<a class="headerlink" href="#ozniteliklerin-incelenmesi-ve-on-islemesi" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.4.1. </span>Özniteliklerin incelenmesi ve ön işlemesi<a class="headerlink" href="#ozniteliklerin-incelenmesi-ve-on-islemesi" title="Permalink to this headline">#</a></h3>
 <p>Dosyalar için hesaplanan bütün öznitelikler, her biri bir satırda olacak şekilde tek bir dosyaya yazıldı: <code class="docutils literal notranslate"><span class="pre">data.csv</span></code>. Bu temsilde kolonlar öznitelikleri, satırlar da her bir örneği/dosyayı temsil etmekte. Bu, makine öğrenmesi verilerinde sıkça kullanılan bir düzendir.</p>
 <p>Verileri yükleyip incelemeye başlayalım. Bunun için <a class="reference external" href="https://pandas.pydata.org/docs/getting_started/index.html"><code class="docutils literal notranslate"><span class="pre">pandas</span></code></a> kütüphanesi kullanacağız.</p>
 <div class="cell docutils container">
@@ -1959,7 +1996,7 @@ spectral_rms.stdev :	varyans = 2.65605378621194e-07 ortalama = 0.001959060080508
 </div>
 </section>
 <section id="ozniteliklerin-on-islemesi">
-<h3>Özniteliklerin ön işlemesi<a class="headerlink" href="#ozniteliklerin-on-islemesi" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.4.2. </span>Özniteliklerin ön işlemesi<a class="headerlink" href="#ozniteliklerin-on-islemesi" title="Permalink to this headline">#</a></h3>
 <p>Sınıflandırıcı modelimizi eğitmeye başlamadan önce öznitelik verimiz üzerinde uygulayabileceğimiz ön işleme adımlarına değinelim.</p>
 <p>#### Normalizasyon</p>
 <p>Öznitelik normalizasyonu makine öğrenmesi modelinin eğitilebilmesi için gerekli ön adımlardan birisidir. Özniteliklerin normalize edilmemesi (öznitelikler arasında büyük boyut farklılıklarının olması) optimizasyon sürecinde modelin iç parametrelerinin iyileştirilmesini zorlaştırmaktadır. Verimize baktığımızda örneğin <code class="docutils literal notranslate"><span class="pre">melbands_kurtosis.mean</span></code> ile <code class="docutils literal notranslate"><span class="pre">melbands_flatness_db.mean</span></code> büyüklükleri arasında 6000 kat civarında fark olduğunu gözlüyoruz. Öncelikle bu farklılıkları gidermeliyiz.</p>
@@ -2300,7 +2337,7 @@ spectral_rms.stdev :	varyans = 2.65605378621194e-07 ortalama = 0.001959060080508
 <p><strong>Gözlem:</strong> Öznitelikler normalize edildi. Şimdi tablomuzu makine öğrenmesi araçlarının kabul ettiği matrislere dönüştürebiliriz</p>
 <p><strong>ÖNEMLİ:</strong> Problemin ve verinin doğasına bağlı olarak özniteliklere uygulanması gereken çok sayıda işlem olabilir. Örneğin boyut azaltma işlemlerine ihtiyaç duyulabilir. Defterimizin karmaşıklığını artırmamak için ön işlemeyi normalizasyon ile sınırlı tuttuk.</p>
 <section id="veri-ornek-sayisini-dengeleme">
-<h4>Veri örnek sayısını dengeleme<a class="headerlink" href="#veri-ornek-sayisini-dengeleme" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">7.4.2.1. </span>Veri örnek sayısını dengeleme<a class="headerlink" href="#veri-ornek-sayisini-dengeleme" title="Permalink to this headline">#</a></h4>
 <p>Şimdi elimizdeki veri kümesinin kategorilere düşen örnek sayıları açısından dengeli olup olmadığına bakalım:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2355,9 +2392,9 @@ Name: enstruman, dtype: int64
 </section>
 </section>
 <section id="otomatik-siniflandirici-egitimi-ve-testi">
-<h2>Otomatik sınıflandırıcı eğitimi ve testi<a class="headerlink" href="#otomatik-siniflandirici-egitimi-ve-testi" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">7.5. </span>Otomatik sınıflandırıcı eğitimi ve testi<a class="headerlink" href="#otomatik-siniflandirici-egitimi-ve-testi" title="Permalink to this headline">#</a></h2>
 <section id="oznitelikler-ve-etiketler-icin-matrislerin-formatlanmasi">
-<h3>Öznitelikler ve etiketler için matrislerin formatlanması<a class="headerlink" href="#oznitelikler-ve-etiketler-icin-matrislerin-formatlanmasi" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.5.1. </span>Öznitelikler ve etiketler için matrislerin formatlanması<a class="headerlink" href="#oznitelikler-ve-etiketler-icin-matrislerin-formatlanmasi" title="Permalink to this headline">#</a></h3>
 <p><strong>Öznitelikler (“inputs”, <code class="docutils literal notranslate"><span class="pre">X</span></code>) ve etiketler (“outputs”, <code class="docutils literal notranslate"><span class="pre">y</span></code>) için matrislerin formatlanması</strong></p>
 <p>Şimdi sınıflandırıcıların giriş-çıkış formatlarına uygun matrisleri hazırlayabiliriz. Giriş-çıkış formatlarını öğrenmek için <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> dokümantasyonunu veya <a class="reference external" href="https://scikit-learn.org/stable/tutorial/index.html">örneklerini</a> inceleyebilirsiniz.</p>
 <div class="cell docutils container">
@@ -2407,7 +2444,7 @@ Tüm etiket bilgileri: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 </div>
 </section>
 <section id="verinin-egitim-ve-test-alt-kumelerine-bolunmesi">
-<h3>Verinin eğitim ve test alt-kümelerine bölünmesi<a class="headerlink" href="#verinin-egitim-ve-test-alt-kumelerine-bolunmesi" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.5.2. </span>Verinin eğitim ve test alt-kümelerine bölünmesi<a class="headerlink" href="#verinin-egitim-ve-test-alt-kumelerine-bolunmesi" title="Permalink to this headline">#</a></h3>
 <p>Veri setimizin bir kısmını sınıflandırıcıyı eğitirken, başka bir kısmını da eğittiğimiz sınıflandırıcıyı test etmek için kullanacağız.</p>
 <img src = "https://developers.google.com/machine-learning/crash-course/images/PartitionTwoSets.svg" width=500 />
 <div class="cell docutils container">
@@ -2749,7 +2786,7 @@ instrument/segments/flute_35.wav  dosyası sınıflandırma sonucu:  flute
 </div>
 </section>
 <section id="birden-fazla-siniflandiricinin-karsilastirilmasi">
-<h3>Birden fazla sınıflandırıcının karşılaştırılması<a class="headerlink" href="#birden-fazla-siniflandiricinin-karsilastirilmasi" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.5.3. </span>Birden fazla sınıflandırıcının karşılaştırılması<a class="headerlink" href="#birden-fazla-siniflandiricinin-karsilastirilmasi" title="Permalink to this headline">#</a></h3>
 <p>Makine öğrenmesi problemlerini çalışırken hangi sınıflandırıcının probleme daha uygun olduğuna karar vermemiz gerekir. Çoğunlukla uygulanan yöntem, bir dizi sınıflandırıcıyı test etmek ve başarıları üzerinden sınıflandırıcıları karşılaştırmaktır. Şimdi birden fazla sınıflandırıcının bu problem üzerinde performansını karşılaştıracağız.</p>
 <p>Birden fazla sınıflandırıcı karşılaştırmalı olarak test edildiğinde ya da bir sınıflandırıcının sonuçları farklı tasarım parametreleriyle incelendiğinde verilerin nasıl eğitim ve test kümelerine bölünmesi gerektiği üzerine dikkatlice düşünülmesi gereken bir noktadır. <strong>Genel prensip olarak</strong> test verisi hiçbir karar alma sürecinde kullanılmamalıdır. Çünkü test verisi sistemin karşılaşmadığı gerçek uygulama verilerini temsil eder. Ne bir modelin tasarım parametrelerine karar verirken, ne de çeşitli makine öğrenmesi modelleri arasında seçim yaparken test verisini kullanmalıyız. Bu durumda, eğitim kümemizde ikinci bir bölme işlemi yapmaya ihtiyaç duyarız (veri kümesinin train-validation-test olarak ayrılma ihtiyacı konusunda <a class="reference external" href="https://en.wikipedia.org/wiki/Training,_validation,_and_test_sets">ilgili Wikipedia sayfasını</a> okuyabilirsiniz). Bu bölme işlemi için tek seferde rasgele yapılacak bir bölünmede yapılacak seçimler her rasgele bölünmede farklı sonuç vereceği için tek eğitim-test yerine çok sayıda eğitim-test deneyi tasarlamakta fayda vardır. “Cros validation” ismi verilen bu süreci iyi anlamak ve doğru uygulamak deneylerimizin güvenilirliği açısından büyük önem arz etmektedir.</p>
 <table class="colwidths-auto table">
@@ -2937,7 +2974,7 @@ weighted avg       0.97      0.97      0.97        29
 <p>Şekil 7.10: Karıştırma matrisi</p>
 </section>
 <section id="peki-derin-ogrenme-modellerini-kullanabilir-miyiz">
-<h3>Peki derin öğrenme modellerini kullanabilir miyiz?<a class="headerlink" href="#peki-derin-ogrenme-modellerini-kullanabilir-miyiz" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.5.4. </span>Peki derin öğrenme modellerini kullanabilir miyiz?<a class="headerlink" href="#peki-derin-ogrenme-modellerini-kullanabilir-miyiz" title="Permalink to this headline">#</a></h3>
 <p>Derin öğrenme modellerinin performansı veri sayısının fazla olduğu durumlarda konvansiyonel modelleri aşmaktadır.
 Elimizdeki veri boyutu küçük olduğu için derin öğrenme modellerinin daha yüksek başarı göstermesini beklemiyoruz. Yine de altta bir örnek sunuyoruz.</p>
 <div class="cell docutils container">
@@ -3315,7 +3352,7 @@ Test accuracy: 0.8620689511299133
 </section>
 </section>
 <section id="egzersiz-odev">
-<h2>Egzersiz/Ödev<a class="headerlink" href="#egzersiz-odev" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">7.6. </span>Egzersiz/Ödev<a class="headerlink" href="#egzersiz-odev" title="Permalink to this headline">#</a></h2>
 <p>Bu bölümde otomatik enstrüman sınıflandırması için bir örnek gördünüz. Şimdi isterseniz başka bir veri kümesinde aynı deneyi tekrarlamayı deneyebilirsiniz. Bunun için CompMusic projesinde toplanmış verilerden
 <a class="reference external" href="https://compmusic.upf.edu/mridangam-stroke-dataset">Mridangam Stroke dataset</a>ini kullanabilirsiniz. Amaç 10 farklı vuruş sınıfını veya 6 farklı tonik sınıfını en yüksek doğruluk ile sınıflandırabilen bir sistemi tasarlamak.</p>
 <p>Bu bölümde yapılana benzer şekilde tasarımınızı gerçekleştirdikten sonra isterseniz özniteliklere boyut azaltma (dimensionality reduction) tekniklerini uygulayıp performansa etkisini gözleyebilirsiniz.</p>
@@ -3355,13 +3392,13 @@ Test accuracy: 0.8620689511299133
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">4a) Akustik Parametreler, Düşük Seviyeli Öznitelikler</p>
+            <p class="prev-next-title"><span class="section-number">6. </span>Akustik Parametreler, Düşük Seviyeli Öznitelikler</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="8_EzgiAnalizi_FrekansKestirimi.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">5a) Ezgi Analizi - Temel titreşim frekans kestirimi</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Ezgi Analizi - Temel titreşim frekans kestirimi</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

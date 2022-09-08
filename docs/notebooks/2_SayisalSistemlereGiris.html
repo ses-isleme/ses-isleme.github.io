@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2a) Sayısal Sistemlere Giriş &#8212; Python Ile Ses İşlemeye Giriş</title>
+    <title>2. Sayısal Sistemlere Giriş &#8212; Python Ile Ses İşlemeye Giriş</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,24 +54,14 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2b) Z-Dönüşümü ve Sistemler" href="3_ZDonusumuVeSistemler.html" />
-    <link rel="prev" title="1. 1) Temel Sinyaller, Temel İşlemler" href="1_TemelSinyaller_TemelIslemler.html" />
+    <link rel="next" title="3. Z-Dönüşümü ve Sistemler" href="3_ZDonusumuVeSistemler.html" />
+    <link rel="prev" title="1. Temel Sinyaller, Temel İşlemler" href="1_TemelSinyaller_TemelIslemler.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
 
     <!-- Google Analytics -->
     
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
-<script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-196606878-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
-
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
 <!-- Checkboxes to toggle the left sidebar -->
@@ -145,12 +135,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Sayısal Sistemlere Giriş
+   2. Sayısal Sistemlere Giriş
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="3_ZDonusumuVeSistemler.html">
-   Z-Dönüşümü ve Sistemler
+   3. Z-Dönüşümü ve Sistemler
   </a>
  </li>
 </ul>
@@ -162,12 +152,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="4_SinyallerinFrekansSpektrumAnalizi.html">
-   Sinyal spektrum analizi
+   4. Sinyal spektrum analizi
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="5_MuzikSinyalleriSpektrumu.html">
-   Müzik sinyalleri spektrum analizi
+   5. Müzik sinyalleri spektrum analizi
   </a>
  </li>
 </ul>
@@ -179,12 +169,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="6_AkustikParam_LowLevelFeats.html">
-   Müzik sinyali akustik özniteliklere giriş
+   6. Müzik sinyali akustik özniteliklere giriş
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="7_OtomatikEnstrumanTanima.html">
-   Akustik öznitelikler ile otomatik enstrüman tanıma
+   7. Akustik öznitelikler ile otomatik enstrüman tanıma
   </a>
  </li>
 </ul>
@@ -196,12 +186,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="8_EzgiAnalizi_FrekansKestirimi.html">
-   Temel titreşim frekans kestirimi
+   8. Temel titreşim frekans kestirimi
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="9_EntonasyonAnalizi.html">
-   Entonasyon Analizi
+   9. Entonasyon Analizi
   </a>
  </li>
 </ul>
@@ -213,7 +203,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="10_RitmikAnaliz.html">
-   Ritmik Analiz
+   10. Ritmik Analiz
   </a>
  </li>
 </ul>
@@ -445,97 +435,97 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sayisal-sistemlere-giris">
-   Sayısal Sistemlere Giriş
+  <a class="reference internal nav-link" href="#id1">
+   2.1. Sayısal Sistemlere Giriş
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#basit-gecikme-sistemi-simple-delay-system">
-     Basit gecikme sistemi (Simple delay system)
+     2.1.1. Basit gecikme sistemi (Simple delay system)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#hareketli-ortalama-filtresi-moving-average-filter">
-     Hareketli ortalama filtresi (Moving average filter)
+     2.1.2. Hareketli ortalama filtresi (Moving average filter)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#kumulatif-toplam-yapan-sistem-accumulator-function">
-     Kümülatif toplam yapan sistem (Accumulator function)
+     2.1.3. Kümülatif toplam yapan sistem (Accumulator function)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fark-turev-sistemi-differentiator">
-     Fark/türev sistemi (Differentiator)
+     2.1.4. Fark/türev sistemi (Differentiator)
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#egzersizler-ornekler">
-   Egzersizler/Örnekler
+   2.2. Egzersizler/Örnekler
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#egzersiz-ornek-1">
-     Egzersiz/örnek 1
+     2.2.1. Egzersiz/örnek 1
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#egzersiz-ornek-2">
-     Egzersiz/örnek 2
+     2.2.2. Egzersiz/örnek 2
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#egzersiz-ornek-3">
-     Egzersiz/örnek 3
+     2.2.3. Egzersiz/örnek 3
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#egzersiz-ornek-4">
-     Egzersiz/örnek 4
+     2.2.4. Egzersiz/örnek 4
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#egzersiz-ornek-5">
-     Egzersiz/örnek 5
+     2.2.5. Egzersiz/örnek 5
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sistem-frekans-cevabinin-fazinin-dogrusalligi-neden-onemli">
-   Sistem frekans cevabının fazının doğrusallığı neden önemli?
+   2.3. Sistem frekans cevabının fazının doğrusallığı neden önemli?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sistemlerin-dogrusal-fark-denklemleriyle-tanimlanmasi-linear-constant-coefficients-difference-equations-lccde">
-   Sistemlerin doğrusal fark denklemleriyle tanımlanması (Linear Constant Coefficients Difference Equations: LCCDE)
+   2.4. Sistemlerin doğrusal fark denklemleriyle tanımlanması (Linear Constant Coefficients Difference Equations: LCCDE)
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Egzersiz/Örnek 1
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id2">
-     Egzersiz/örnek 2
+     2.4.1. Egzersiz/Örnek 1
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id3">
-     Egzersiz/örnek 3
+     2.4.2. Egzersiz/örnek 2
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id4">
-     Egzersiz/örnek 4
+     2.4.3. Egzersiz/örnek 3
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id5">
-     Egzersiz/örnek 5
+     2.4.4. Egzersiz/örnek 4
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     2.4.5. Egzersiz/örnek 5
     </a>
    </li>
   </ul>
@@ -549,7 +539,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>2a) Sayısal Sistemlere Giriş</h1>
+                <h1>Sayısal Sistemlere Giriş</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -560,97 +550,97 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sayisal-sistemlere-giris">
-   Sayısal Sistemlere Giriş
+  <a class="reference internal nav-link" href="#id1">
+   2.1. Sayısal Sistemlere Giriş
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#basit-gecikme-sistemi-simple-delay-system">
-     Basit gecikme sistemi (Simple delay system)
+     2.1.1. Basit gecikme sistemi (Simple delay system)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#hareketli-ortalama-filtresi-moving-average-filter">
-     Hareketli ortalama filtresi (Moving average filter)
+     2.1.2. Hareketli ortalama filtresi (Moving average filter)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#kumulatif-toplam-yapan-sistem-accumulator-function">
-     Kümülatif toplam yapan sistem (Accumulator function)
+     2.1.3. Kümülatif toplam yapan sistem (Accumulator function)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fark-turev-sistemi-differentiator">
-     Fark/türev sistemi (Differentiator)
+     2.1.4. Fark/türev sistemi (Differentiator)
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#egzersizler-ornekler">
-   Egzersizler/Örnekler
+   2.2. Egzersizler/Örnekler
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#egzersiz-ornek-1">
-     Egzersiz/örnek 1
+     2.2.1. Egzersiz/örnek 1
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#egzersiz-ornek-2">
-     Egzersiz/örnek 2
+     2.2.2. Egzersiz/örnek 2
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#egzersiz-ornek-3">
-     Egzersiz/örnek 3
+     2.2.3. Egzersiz/örnek 3
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#egzersiz-ornek-4">
-     Egzersiz/örnek 4
+     2.2.4. Egzersiz/örnek 4
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#egzersiz-ornek-5">
-     Egzersiz/örnek 5
+     2.2.5. Egzersiz/örnek 5
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sistem-frekans-cevabinin-fazinin-dogrusalligi-neden-onemli">
-   Sistem frekans cevabının fazının doğrusallığı neden önemli?
+   2.3. Sistem frekans cevabının fazının doğrusallığı neden önemli?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sistemlerin-dogrusal-fark-denklemleriyle-tanimlanmasi-linear-constant-coefficients-difference-equations-lccde">
-   Sistemlerin doğrusal fark denklemleriyle tanımlanması (Linear Constant Coefficients Difference Equations: LCCDE)
+   2.4. Sistemlerin doğrusal fark denklemleriyle tanımlanması (Linear Constant Coefficients Difference Equations: LCCDE)
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Egzersiz/Örnek 1
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id2">
-     Egzersiz/örnek 2
+     2.4.1. Egzersiz/Örnek 1
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id3">
-     Egzersiz/örnek 3
+     2.4.2. Egzersiz/örnek 2
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id4">
-     Egzersiz/örnek 4
+     2.4.3. Egzersiz/örnek 3
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id5">
-     Egzersiz/örnek 5
+     2.4.4. Egzersiz/örnek 4
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     2.4.5. Egzersiz/örnek 5
     </a>
    </li>
   </ul>
@@ -665,11 +655,11 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="a-sayisal-sistemlere-giris">
-<h1>2a) Sayısal Sistemlere Giriş<a class="headerlink" href="#a-sayisal-sistemlere-giris" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="sayisal-sistemlere-giris">
+<h1><span class="section-number">2. </span>Sayısal Sistemlere Giriş<a class="headerlink" href="#sayisal-sistemlere-giris" title="Permalink to this headline">#</a></h1>
 <p><a href="https://colab.research.google.com/drive/1CJfeuQTUlCuWf0DpUDA3NFzIt2dsC4Lw?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
-<section id="sayisal-sistemlere-giris">
-<h2>Sayısal Sistemlere Giriş<a class="headerlink" href="#sayisal-sistemlere-giris" title="Permalink to this headline">#</a></h2>
+<section id="id1">
+<h2><span class="section-number">2.1. </span>Sayısal Sistemlere Giriş<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
 <p><strong>Önemli not:</strong> Bu defterin içeriği mühendislik öğrencileri/mezunlarına yönelik hazırlanmıştır. Bu alanda deneyiminiz yok ise içerik sizin için yorucu olabilir. Bu durumda 2. ve 3. defterleri atlayıp “Sinyallerin frekans spektrum analizi” başlıklı 4. defterden okumaya devam edebilirsiniz.</p>
 <p>Bu defterimizde amacımız sayısal sinyalleri girdi olarak alıp işleyen ve sayısal çıktı sunan sistemlere örnekler sunmaktır. En basitinden başlayarak bazı sistemleri ele alacak, Python ile kodlayacak ve bu sistemlerin karakteristiklerini inceleyeceğiz.</p>
 <p>Sistemler verilen bir girdiye karşılık bir çıktı üreten yapılar olarak ele alanabilir ve sıklıkla Şekilde 2.1’deki gibi bir kutu ile temsil edilir. Bu çizimde üstte sürekli zaman (analog işaret ve sistem), altta ayrık zaman (sayısal işaret ve sistem) temsil edilmiştir.</p>
@@ -725,18 +715,18 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pysoundfile in /usr/local/anaconda3/envs/kitap/lib/python3.9/site-packages (0.9.0.post1)
-Requirement already satisfied: cffi&gt;=0.6 in /usr/local/anaconda3/envs/kitap/lib/python3.9/site-packages (from pysoundfile) (1.15.1)
-Requirement already satisfied: pycparser in /usr/local/anaconda3/envs/kitap/lib/python3.9/site-packages (from cffi&gt;=0.6-&gt;pysoundfile) (2.21)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pysoundfile in /home/baris/miniconda3/envs/KitapYazim/lib/python3.9/site-packages (0.9.0.post1)
+Requirement already satisfied: cffi&gt;=0.6 in /home/baris/miniconda3/envs/KitapYazim/lib/python3.9/site-packages (from pysoundfile) (1.15.1)
+Requirement already satisfied: pycparser in /home/baris/miniconda3/envs/KitapYazim/lib/python3.9/site-packages (from cffi&gt;=0.6-&gt;pysoundfile) (2.21)
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;speech-male.wav&#39;, &lt;http.client.HTTPMessage at 0x7f95f338a1f0&gt;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;speech-male.wav&#39;, &lt;http.client.HTTPMessage at 0x7fa6b3ee1b20&gt;)
 </pre></div>
 </div>
 </div>
 </div>
 <section id="basit-gecikme-sistemi-simple-delay-system">
-<h3>Basit gecikme sistemi (Simple delay system)<a class="headerlink" href="#basit-gecikme-sistemi-simple-delay-system" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.1.1. </span>Basit gecikme sistemi (Simple delay system)<a class="headerlink" href="#basit-gecikme-sistemi-simple-delay-system" title="Permalink to this headline">#</a></h3>
 <p>Düşünebileceğimiz en basit sistemlerden birisi giriş sinyalini zamanda öteleyen/geciktiren bir sistemdir. Girdi-çıktı ilişkisi şu denklemle ifade edilebilir:</p>
 <div class="math notranslate nohighlight">
 \[y[n] = f(x[n]) = x[n-n_0]\]</div>
@@ -915,7 +905,7 @@ Requirement already satisfied: pycparser in /usr/local/anaconda3/envs/kitap/lib/
 <p>Faz spektrumumuz doğrusallaştı. Faz spektrumunun doğrusal olması oldukça önemli bir özellik. Doğrusal fazlı bir sistem, girdi sinyalinin içerisindeki farklı frekansta bileşenlerin hepsinin zamanda aynı miktarda kaydıracaktır. Bu özelliği defterimizin sonuna doğru örnek üzerinden açıklıyoruz. Şimdi bir sonraki sistemimizi ele alalım.</p>
 </section>
 <section id="hareketli-ortalama-filtresi-moving-average-filter">
-<h3>Hareketli ortalama filtresi (Moving average filter)<a class="headerlink" href="#hareketli-ortalama-filtresi-moving-average-filter" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.1.2. </span>Hareketli ortalama filtresi (Moving average filter)<a class="headerlink" href="#hareketli-ortalama-filtresi-moving-average-filter" title="Permalink to this headline">#</a></h3>
 <p>Şimdi bir sinyalin küçük varyasyonlarını gözardı edip genel yönelimini izlememize yardımcı olan bir sistemi ele alalım. Finansal veriler üzerinde sıkça uygulanan bu filtre/sistem, verinin belirli aralıklarda ortalamalarını hesaplamaya dayanır. Örneğin elimizde saatlik Dolar/TL parite değerlerini içeren bir sinyal olduğunu düşünelim. Saatlik veriler çok fazla iniş-çıkış içereceği için günlük ortalama, haftalık ortalama, aylık ortalama alarak değişimleri gözlemek isteyebiliriz. Bu sistem girdi olarak aldığı sinyali belirlediğimiz genişlikte pencerelere bölüp, ortalama hesaplayıp, elde ettiği değerleri içeren yeni bir sinyali çıktı olarak verecektir. Sistemi şu formülle tanımlayabiliriz:</p>
 <div class="math notranslate nohighlight">
 \[y[n] = \frac{1}{M_1+M_2+1} \sum_{k = -M_1}^{M_2} x[n-k]\]</div>
@@ -1020,7 +1010,7 @@ Requirement already satisfied: pycparser in /usr/local/anaconda3/envs/kitap/lib/
 <p>Sistemimizin düşük geçiren bir filtre olduğunu görebiliyoruz. Bir sonraki sistem örneğimize geçelim.</p>
 </section>
 <section id="kumulatif-toplam-yapan-sistem-accumulator-function">
-<h3>Kümülatif toplam yapan sistem (Accumulator function)<a class="headerlink" href="#kumulatif-toplam-yapan-sistem-accumulator-function" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.1.3. </span>Kümülatif toplam yapan sistem (Accumulator function)<a class="headerlink" href="#kumulatif-toplam-yapan-sistem-accumulator-function" title="Permalink to this headline">#</a></h3>
 <p>Basit sistemlerden bir diğeri çıktı sinyalinin <span class="math notranslate nohighlight">\(n\)</span> anındaki değerini hesaplamak için girdi sinyalinin <span class="math notranslate nohighlight">\(n\)</span> ve <span class="math notranslate nohighlight">\(n\)</span>’den küçük (geçmiş) değerlerinin tümünü toplayan sistemdir. Bu bir çeşit integral olarak da düşünülebilir.</p>
 <div class="math notranslate nohighlight">
 \[y[n] = \sum_{k = -\infty}^{n} x[k]\]</div>
@@ -1074,7 +1064,7 @@ Requirement already satisfied: pycparser in /usr/local/anaconda3/envs/kitap/lib/
 <p>Yine düşük geçiren bir sistem elde ettik. <strong>Burada önemli bir nokta sistemin sonsuz uzunlukta bir dürtü cevabı (IIR: Infinite impulse response) olması ancak bizim <span class="math notranslate nohighlight">\(h[n]\)</span> vektörünü sınırlı uzunlukta tutmak zorunda olmamızdır. Zamanda sınırlandırma yaptığımız durumda sistemin karakterini ve spektrumunu da değiştiririz. IIR sistemleri bu sebeple dürtü cevabı oluşturarak gerçeklememeyi tercih ederiz. Alternatif gerçekleme yöntemini ileride ele alacağız.</strong> Bu sistem özelinde: bu sistem stabil bir sistem olmadığı (dürtü cevabı toplamı sonlu olmadığı) için zaten sistemin frekans cevabını (Fourier dönüşümünü) hesaplayıp çizdiremeyiz (<a class="reference external" href="https://ccrma.stanford.edu/~jos/st/Existence_Fourier_Transform.html">bakınız</a>)). Yalnızca dürtü cevabını sınırlandırdığımız durumda dönüşüm hesaplayıp bir çizim elde edebiliyoruz.</p>
 </section>
 <section id="fark-turev-sistemi-differentiator">
-<h3>Fark/türev sistemi (Differentiator)<a class="headerlink" href="#fark-turev-sistemi-differentiator" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.1.4. </span>Fark/türev sistemi (Differentiator)<a class="headerlink" href="#fark-turev-sistemi-differentiator" title="Permalink to this headline">#</a></h3>
 <p>Yukarıda integral alan sistem tanımlamıştık. Şimdi ters işlem olan fark alan sistemi tanımlayalım:</p>
 <div class="math notranslate nohighlight">
 \[y[n] = x[n] - x[n-1]\]</div>
@@ -1184,9 +1174,9 @@ Dürtü cevabını hesaplamak için <span class="math notranslate nohighlight">\
 </section>
 </section>
 <section id="egzersizler-ornekler">
-<h2>Egzersizler/Örnekler<a class="headerlink" href="#egzersizler-ornekler" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.2. </span>Egzersizler/Örnekler<a class="headerlink" href="#egzersizler-ornekler" title="Permalink to this headline">#</a></h2>
 <section id="egzersiz-ornek-1">
-<h3>Egzersiz/örnek 1<a class="headerlink" href="#egzersiz-ornek-1" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.2.1. </span>Egzersiz/örnek 1<a class="headerlink" href="#egzersiz-ornek-1" title="Permalink to this headline">#</a></h3>
 <p>Girdi sinyalini 10 ile çarparak yükselten bir sistemin frekans cevabını çizdiren bir kod parçası yazınız.</p>
 <div class="math notranslate nohighlight">
 \[y[n] = 10x[n]\]</div>
@@ -1211,7 +1201,7 @@ Dürtü cevabını hesaplamak için <span class="math notranslate nohighlight">\
 <p>Sistem tüm frekanslardaki bileşenlerin genliklerini 10 ile çarpıyor ve fazlarını değiştirmiyor.</p>
 </section>
 <section id="egzersiz-ornek-2">
-<h3>Egzersiz/örnek 2<a class="headerlink" href="#egzersiz-ornek-2" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.2.2. </span>Egzersiz/örnek 2<a class="headerlink" href="#egzersiz-ornek-2" title="Permalink to this headline">#</a></h3>
 <p>Nedensel bir sistemin dürtü cevabı aşağıdaki gibi verilmiştir:</p>
 <p><span class="math notranslate nohighlight">\(h[n]\)</span> = [0.02455383, 0.23438946, 0.4821134,  0.23438946, 0.02455383]</p>
 <p>Sistemin frekans cevabını çizdiriniz. Sistem düşük geçiren mi yüksek geçiren midir?</p>
@@ -1249,7 +1239,7 @@ Dürtü cevabını hesaplamak için <span class="math notranslate nohighlight">\
 <p>Yukarıdaki örnekteki filtrenin hazır bir FIR filtre tasarım fonksiyonu kullanılarak oluşurulduğunu görmüş olduk. Siz de ihtiyaç duyduğunuzda <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.firwin.html">signal.firwin</a> fonksiyonu ile arzu ettiğiniz kesim frekansına sahip filtre tasarlayıp filtrenin dürtü cevabını elde edebilirsiniz. Burada önemli detaylardan birisi de oluştural filtrenin faz spektrumunun doğrusal olması; uygulandığı sinyalin değişik frekanslardaki bileşenlerini zamanda eşit miktarda kaydırmasıdır. Tasarlanan sistemin dürtü cevabının zamanda simetrik olması bu özelliği garanti altına alır.</p>
 </section>
 <section id="egzersiz-ornek-3">
-<h3>Egzersiz/örnek 3<a class="headerlink" href="#egzersiz-ornek-3" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.2.3. </span>Egzersiz/örnek 3<a class="headerlink" href="#egzersiz-ornek-3" title="Permalink to this headline">#</a></h3>
 <p>Örnek olarak sırasıyla bir düşük geçiren, bir yüksek geçiren, bir de bant geçiren filtre tasarlayıp elimizdeki örnek ses sinyaline uygulayıp sonucu dinleyip sistemlerin etkilerini deneyimleyelim.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1326,7 +1316,7 @@ Dürtü cevabını hesaplamak için <span class="math notranslate nohighlight">\
 <p>Şekil 2.19: <em>Bant geçiren filtre frekans cevabı</em></p>
 </section>
 <section id="egzersiz-ornek-4">
-<h3>Egzersiz/örnek 4<a class="headerlink" href="#egzersiz-ornek-4" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.2.4. </span>Egzersiz/örnek 4<a class="headerlink" href="#egzersiz-ornek-4" title="Permalink to this headline">#</a></h3>
 <p><strong>İdeal filtre dürtü cevabından yola çıkarak filtre tasarımı:</strong> scipy.signal.firwin fonksiyonunu kullanmak yerine FIR filtre tasarımını, <a class="reference external" href="https://ccrma.stanford.edu/~jos/sasp/Ideal_Lowpass_Filter.html">ideal filtre cevabı</a>ndan yola çıkarak kendimiz de oluşurabilirdik.</p>
 <div class="math notranslate nohighlight">
 \[h[n] = \frac{sin(nw_c)}{n\pi}\]</div>
@@ -1375,7 +1365,7 @@ Dürtü cevabını hesaplamak için <span class="math notranslate nohighlight">\
 <p>Şekilde 2.20 ve 2.21 karşılaştırıldığında şu sonuca varabiliriz: filtremizin uzunluğu/derecesi/karmaşıklığı arttıkça karakteristiği ideale yaklaşıyor.</p>
 </section>
 <section id="egzersiz-ornek-5">
-<h3>Egzersiz/örnek 5<a class="headerlink" href="#egzersiz-ornek-5" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.2.5. </span>Egzersiz/örnek 5<a class="headerlink" href="#egzersiz-ornek-5" title="Permalink to this headline">#</a></h3>
 <p><strong>Filtreleri seri bağlayarak filtre tasarlama:</strong> Bant geçiren bir filtreyi bir düşük geçiren filtre ile bir yüksek geçiren filtreyi arka arkaya bağlayarak da oluşturabiliriz. Bir örnek görelim:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1423,7 +1413,7 @@ Dürtü cevabını hesaplamak için <span class="math notranslate nohighlight">\
 </section>
 </section>
 <section id="sistem-frekans-cevabinin-fazinin-dogrusalligi-neden-onemli">
-<h2>Sistem frekans cevabının fazının doğrusallığı neden önemli?<a class="headerlink" href="#sistem-frekans-cevabinin-fazinin-dogrusalligi-neden-onemli" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.3. </span>Sistem frekans cevabının fazının doğrusallığı neden önemli?<a class="headerlink" href="#sistem-frekans-cevabinin-fazinin-dogrusalligi-neden-onemli" title="Permalink to this headline">#</a></h2>
 <p>Yukarıdaki filtrelerin geçirme bandında faz spektrumlarının doğrusal olduğunu gözleyebiliyoruz. Bu bir rastlantı değil, özellikle fazları doğrusal olacak şekilde tasarlanıyorlar. Bu FIR filtre tasarımında, filtrenin dürtü cevabı (<span class="math notranslate nohighlight">\(h[n]\)</span>) simetrik yapılarak sağlanıyor (bu özelliğin ispatı için <a class="reference external" href="https://hal.archives-ouvertes.fr/hal-01849361/document">bu dokümana bakınız</a>). Şimdi fazı doğrusal olan ve fazı doğrusal olmayan iki sistem düşünelim ve çıktı sinyaline bu durumun nasıl bir etkisi olduğunu gözleyelim. Bu etkiye odaklanabilmek için genlik spektrumunun her frekansta 1 olduğunu varsayalım ve sinyal bileşenlerine sadece fazın etkisini ekleyelim.</p>
 <p>Sistem-1 faz spektrumu doğrusal: <span class="math notranslate nohighlight">\(\angle{H_{s1}(e^{jw})} = 0.02w\)</span></p>
 <p>Sistem-2 faz spektrumu doğrusal olmayan: <span class="math notranslate nohighlight">\(\angle{H_{s2}(e^{jw})} = w^2\)</span>
@@ -1502,7 +1492,7 @@ olsun.</p>
 <p>Yukarıda iki testte oluşturan sinyalleri (Şekil 2.25 ve 2.26) incelediğimizde faz spektrumu doğrusal olan sinyalin, girdi sinyalinin farklı frekanslarındaki bileşenlerini zamanda aynı miktarda kaydırdığını, sonuçta oluşan çıktının(<span class="math notranslate nohighlight">\(y\)</span>) dalga formunun girdinin (<span class="math notranslate nohighlight">\(x\)</span>) dalga formu ile aynı olduğunu görebiliyoruz (Şekil 2.25). Faz spektrumunun doğrusal olmadığı durumda farklı frekanslardaki bileşenler zamanda farklı miktarda kaydırılmış, bu sebeple çıktı sinyali dalga formunun girdi sinyali dalga formundan farklı olduğunu görebiliyoruz (Şekil 2.26). Tasarladığımız sistemlerin mümkünse doğrusal faz spektrumuna sahip olmasını isteriz.</p>
 </section>
 <section id="sistemlerin-dogrusal-fark-denklemleriyle-tanimlanmasi-linear-constant-coefficients-difference-equations-lccde">
-<h2>Sistemlerin doğrusal fark denklemleriyle tanımlanması (Linear Constant Coefficients Difference Equations: LCCDE)<a class="headerlink" href="#sistemlerin-dogrusal-fark-denklemleriyle-tanimlanmasi-linear-constant-coefficients-difference-equations-lccde" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.4. </span>Sistemlerin doğrusal fark denklemleriyle tanımlanması (Linear Constant Coefficients Difference Equations: LCCDE)<a class="headerlink" href="#sistemlerin-dogrusal-fark-denklemleriyle-tanimlanmasi-linear-constant-coefficients-difference-equations-lccde" title="Permalink to this headline">#</a></h2>
 <p>Yukarıda bazı sayısal sistemleri ele aldık. Her birinde girdi çıktı ilişkisini bir denklemle tanımladık. Sayısal sistemler için bu denklemlerin genel bir formu olarak aşağıdaki ifadeyi kullanabiliriz:</p>
 <div class="math notranslate nohighlight">
 \[y[n] = \sum_{k = 0}^{q} b[k]x[n-k] - \sum_{k = 1}^{p} a[k]y[n-k]\]</div>
@@ -1544,8 +1534,8 @@ olsun.</p>
 </div>
 </div>
 </div>
-<section id="id1">
-<h3>Egzersiz/Örnek 1<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<section id="id2">
+<h3><span class="section-number">2.4.1. </span>Egzersiz/Örnek 1<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <p>Aşağıdaki denklem ile tanımlı sistemin frekans cevabını çizdirelim:</p>
 <div class="math notranslate nohighlight">
 \[H(e^{j\omega}) = \frac{1-1.4142e^{-j\omega}+e^{-j2\omega}}{1-1.3433e^{-j\omega}+0.9025e^{-j2\omega}}\]</div>
@@ -1601,8 +1591,8 @@ olsun.</p>
 </div>
 <p>Şekil 2.29: <em>Sistemin dürtü cevabının Fourier dönüşümünden elde edilen sistem frekans cevabı</em></p>
 </section>
-<section id="id2">
-<h3>Egzersiz/örnek 2<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<section id="id3">
+<h3><span class="section-number">2.4.2. </span>Egzersiz/örnek 2<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
 <p>Aşağıdaki denklemle tanımlanan sistemin frekans cevabını çizdiriniz:</p>
 <div class="math notranslate nohighlight">
 \[H(e^{j\omega}) = \frac{1-e^{-j2\omega}}{1-0.25e^{-j\omega}}\]</div>
@@ -1621,8 +1611,8 @@ olsun.</p>
 </div>
 <p>Şekil 2.30: <em>Sistem frekans cevabı</em></p>
 </section>
-<section id="id3">
-<h3>Egzersiz/örnek 3<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<section id="id4">
+<h3><span class="section-number">2.4.3. </span>Egzersiz/örnek 3<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
 <p><strong>Ters sistemler</strong> Aşağıdaki iki sistem birbirinin tersidir. Frekans cevaplarını çizdirerek kontrol ediniz:</p>
 <div class="math notranslate nohighlight">
 \[H(e^{j\omega}) = \frac{1-0.25e^{-j\omega}}{1+0.5e^{-j\omega}}\]</div>
@@ -1655,8 +1645,8 @@ olsun.</p>
 <p>Şekil 2.32: <em>Sistem frekans cevabı (G)</em></p>
 <p>Şekil 2.31 ve 2.32’yi karşılaştırdığımızda sistemin frekans cevaplarının birbirinin tersi olduğunu görebiliyoruz.</p>
 </section>
-<section id="id4">
-<h3>Egzersiz/örnek 4<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
+<section id="id5">
+<h3><span class="section-number">2.4.4. </span>Egzersiz/örnek 4<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
 <p>Aşağıdaki denklem ile tanımlanmış sistemin frekans cevabını çizdiren bir kod parçası yazınız:</p>
 <p><span class="math notranslate nohighlight">\(y[n]+0.5y[n-1]+0.75y[n-2]=x[n]-0.5x[n-1]+x[n-3]\)</span></p>
 <p>Fark denkleminden yola çıkarak transfer fonksiyonunu yazabiliriz:</p>
@@ -1677,8 +1667,8 @@ olsun.</p>
 </div>
 <p>Şekil 2.33: <em>Sistem frekans cevabı</em></p>
 </section>
-<section id="id5">
-<h3>Egzersiz/örnek 5<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
+<section id="id6">
+<h3><span class="section-number">2.4.5. </span>Egzersiz/örnek 5<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h3>
 <p>Bir sinyal alttaki sistemle filtrelenmiştir:
 $<span class="math notranslate nohighlight">\(y[n] - 0.8 y[n-1] = x[n]\)</span>$</p>
 <p>Filtrenin etkisini düzeltecek bir sistem tasarlayıp gerçekleyiniz.</p>
@@ -1781,13 +1771,13 @@ $<span class="math notranslate nohighlight">\(y[n] - 0.8 y[n-1] = x[n]\)</span>$
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">1. </span>1) Temel Sinyaller, Temel İşlemler</p>
+            <p class="prev-next-title"><span class="section-number">1. </span>Temel Sinyaller, Temel İşlemler</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="3_ZDonusumuVeSistemler.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">2b) Z-Dönüşümü ve Sistemler</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Z-Dönüşümü ve Sistemler</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -60,16 +62,6 @@ const thebe_selector_output = ".output, .cell_output"
 
     <!-- Google Analytics -->
     
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
-<script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-196606878-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
-
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
 <!-- Checkboxes to toggle the left sidebar -->
@@ -123,24 +115,12 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Python ile sayısal sinyal işlemeye giriş
- </span>
-</p>
-<ul class="nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1_TemelSinyaller_TemelIslemler.html">
-   1. Temel Sinyaller, Temel İşlemler
+   Temel Sinyaller, Temel İşlemler
   </a>
  </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Sayısal Sistemler
- </span>
-</p>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="2_SayisalSistemlereGiris.html">
    Sayısal Sistemlere Giriş
@@ -151,13 +131,6 @@ const thebe_selector_output = ".output, .cell_output"
    Z-Dönüşümü ve Sistemler
   </a>
  </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Spektrum Analizi
- </span>
-</p>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="4_SinyallerinFrekansSpektrumAnalizi.html">
    Sinyal spektrum analizi
@@ -168,13 +141,6 @@ const thebe_selector_output = ".output, .cell_output"
    Müzik sinyalleri spektrum analizi
   </a>
  </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Müzik sinyali analiz: akustik öznitelikler
- </span>
-</p>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="6_AkustikParam_LowLevelFeats.html">
    Müzik sinyali akustik özniteliklere giriş
@@ -185,13 +151,6 @@ const thebe_selector_output = ".output, .cell_output"
    Akustik öznitelikler ile otomatik enstrüman tanıma
   </a>
  </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Müzik ezgi boyutu analizi
- </span>
-</p>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="8_EzgiAnalizi_FrekansKestirimi.html">
    Temel titreşim frekans kestirimi
@@ -202,25 +161,11 @@ const thebe_selector_output = ".output, .cell_output"
    Entonasyon Analizi
   </a>
  </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Müzik ritim boyutu analizi
- </span>
-</p>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="10_RitmikAnaliz.html">
    Ritmik Analiz
   </a>
  </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Ekler
- </span>
-</p>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Ek1_PythonHizliTekrar.html">
    Ek-1 Python Hızlı Tekrar

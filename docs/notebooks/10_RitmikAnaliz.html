@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>6) Ritmik Analiz &#8212; Python Ile Ses İşlemeye Giriş</title>
+    <title>10. Ritmik Analiz &#8212; Python Ile Ses İşlemeye Giriş</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -55,23 +55,13 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Python Hızlı Tekrar" href="Ek1_PythonHizliTekrar.html" />
-    <link rel="prev" title="5b) Entonasyon Analizi" href="9_EntonasyonAnalizi.html" />
+    <link rel="prev" title="9. Entonasyon Analizi" href="9_EntonasyonAnalizi.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
 
     <!-- Google Analytics -->
     
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
-<script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-196606878-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
-
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
 <!-- Checkboxes to toggle the left sidebar -->
@@ -145,12 +135,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="2_SayisalSistemlereGiris.html">
-   Sayısal Sistemlere Giriş
+   2. Sayısal Sistemlere Giriş
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="3_ZDonusumuVeSistemler.html">
-   Z-Dönüşümü ve Sistemler
+   3. Z-Dönüşümü ve Sistemler
   </a>
  </li>
 </ul>
@@ -162,12 +152,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="4_SinyallerinFrekansSpektrumAnalizi.html">
-   Sinyal spektrum analizi
+   4. Sinyal spektrum analizi
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="5_MuzikSinyalleriSpektrumu.html">
-   Müzik sinyalleri spektrum analizi
+   5. Müzik sinyalleri spektrum analizi
   </a>
  </li>
 </ul>
@@ -179,12 +169,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="6_AkustikParam_LowLevelFeats.html">
-   Müzik sinyali akustik özniteliklere giriş
+   6. Müzik sinyali akustik özniteliklere giriş
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="7_OtomatikEnstrumanTanima.html">
-   Akustik öznitelikler ile otomatik enstrüman tanıma
+   7. Akustik öznitelikler ile otomatik enstrüman tanıma
   </a>
  </li>
 </ul>
@@ -196,12 +186,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="8_EzgiAnalizi_FrekansKestirimi.html">
-   Temel titreşim frekans kestirimi
+   8. Temel titreşim frekans kestirimi
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="9_EntonasyonAnalizi.html">
-   Entonasyon Analizi
+   9. Entonasyon Analizi
   </a>
  </li>
 </ul>
@@ -213,7 +203,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Ritmik Analiz
+   10. Ritmik Analiz
   </a>
  </li>
 </ul>
@@ -446,17 +436,17 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   Ritmik Analiz
+   10.1. Ritmik Analiz
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#baslangic-an-lar-i-tespiti">
-     Başlangıç an(lar)ı tespiti
+     10.1.1. Başlangıç an(lar)ı tespiti
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tempo-ve-vurus-anlari-tespiti">
-     Tempo ve vuruş anları tespiti
+     10.1.2. Tempo ve vuruş anları tespiti
     </a>
    </li>
   </ul>
@@ -470,7 +460,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>6) Ritmik Analiz</h1>
+                <h1>Ritmik Analiz</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -482,17 +472,17 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   Ritmik Analiz
+   10.1. Ritmik Analiz
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#baslangic-an-lar-i-tespiti">
-     Başlangıç an(lar)ı tespiti
+     10.1.1. Başlangıç an(lar)ı tespiti
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tempo-ve-vurus-anlari-tespiti">
-     Tempo ve vuruş anları tespiti
+     10.1.2. Tempo ve vuruş anları tespiti
     </a>
    </li>
   </ul>
@@ -508,10 +498,10 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="ritmik-analiz">
-<h1>6) Ritmik Analiz<a class="headerlink" href="#ritmik-analiz" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">10. </span>Ritmik Analiz<a class="headerlink" href="#ritmik-analiz" title="Permalink to this headline">#</a></h1>
 <p><a href="https://colab.research.google.com/drive/1jwpBFh0BkmKbP0L-od0bVbKdVwiJHw4_?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
 <section id="id1">
-<h2>Ritmik Analiz<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">10.1. </span>Ritmik Analiz<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
 <p>Buraya kadar olan defterlerimizde temelde spektrum ve ezgi boyutlarını ele aldık. Bu defterimizde diğer önemli boyut olan ritim boyutunu ele alıyoruz.</p>
 <p>Müzik ses sinyallerinin ritim boyutu ile ilişkili kavramların birçoğu oldukça tartışmaya açık ve kültüre özgüdürler. Burada amacımız sayısal sinyal işleme uygulamaları olduğu için mümkün olduğunca müzikolojik tartışmaların dışında kalmaya, basit sinyal öğeleri tanımlayıp kullanmaya çalışacağız. Bu defterde kullanacağımız temel kavramlar şunlar olacak:</p>
 <ul class="simple">
@@ -536,327 +526,15 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting essentia
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: essentia in /home/baris/miniconda3/envs/KitapYazim/lib/python3.9/site-packages (2.1b6.dev857)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Using cached essentia-2.1b6.dev234.tar.gz (1.1 MB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pyyaml in /home/baris/miniconda3/envs/KitapYazim/lib/python3.9/site-packages (from essentia) (6.0)
+Requirement already satisfied: numpy&gt;=1.8.2 in /home/baris/miniconda3/envs/KitapYazim/lib/python3.9/site-packages (from essentia) (1.22.4)
+Requirement already satisfied: six in /home/baris/miniconda3/envs/KitapYazim/lib/python3.9/site-packages (from essentia) (1.16.0)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l-
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> done
-?25hDiscarding <span class=" -Color -Color-Blue">https://files.pythonhosted.org/packages/bd/10/57da0f50d2a5e1635a463cc6495089f17ee59508e56d8f7ab4e198f7c08c/essentia-2.1b6.dev234.tar.gz#sha256=3c18d91e21d7bf29aece4f79a4fa25490fd155ce6a8e184c08c50183c6f25a29 (from https://pypi.org/simple/essentia/)</span>: <span class=" -Color -Color-Yellow">Requested essentia from https://files.pythonhosted.org/packages/bd/10/57da0f50d2a5e1635a463cc6495089f17ee59508e56d8f7ab4e198f7c08c/essentia-2.1b6.dev234.tar.gz#sha256=3c18d91e21d7bf29aece4f79a4fa25490fd155ce6a8e184c08c50183c6f25a29 has inconsistent version: filename has &#39;2.1b6.dev234&#39;, but metadata has &#39;2.1b6.dev0&#39;</span>
-  Using cached essentia-2.1b6.dev184.tar.gz (1.1 MB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l-
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> done
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?25hDiscarding <span class=" -Color -Color-Blue">https://files.pythonhosted.org/packages/c2/83/3d3ce935032c72db531c7456fffe090dfce1d702aa8123873fdf049f0621/essentia-2.1b6.dev184.tar.gz#sha256=30ff4b07282e33dc0b0a601e179b29d4a985d9d64450dad717365a3bc8aa1b53 (from https://pypi.org/simple/essentia/)</span>: <span class=" -Color -Color-Yellow">Requested essentia from https://files.pythonhosted.org/packages/c2/83/3d3ce935032c72db531c7456fffe090dfce1d702aa8123873fdf049f0621/essentia-2.1b6.dev184.tar.gz#sha256=30ff4b07282e33dc0b0a601e179b29d4a985d9d64450dad717365a3bc8aa1b53 has inconsistent version: filename has &#39;2.1b6.dev184&#39;, but metadata has &#39;2.1b6.dev0&#39;</span>
-  Using cached essentia-2.1b6.dev90.tar.gz (1.1 MB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l-
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> done
-?25hDiscarding <span class=" -Color -Color-Blue">https://files.pythonhosted.org/packages/84/b8/63aa9413681bf701dd6569a378c63db530a96b99ed5df367255a3a11dc42/essentia-2.1b6.dev90.tar.gz#sha256=6df6c143813225b6480f8c2cb5ea9e0463caed31d6c706efd9f73f8dc37fa634 (from https://pypi.org/simple/essentia/)</span>: <span class=" -Color -Color-Yellow">Requested essentia from https://files.pythonhosted.org/packages/84/b8/63aa9413681bf701dd6569a378c63db530a96b99ed5df367255a3a11dc42/essentia-2.1b6.dev90.tar.gz#sha256=6df6c143813225b6480f8c2cb5ea9e0463caed31d6c706efd9f73f8dc37fa634 has inconsistent version: filename has &#39;2.1b6.dev90&#39;, but metadata has &#39;2.1b6.dev0&#39;</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Using cached essentia-2.1b5.tar.gz (933 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l-
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> done
-?25hRequirement already satisfied: numpy&gt;=1.8.2 in /usr/local/anaconda3/envs/kitap/lib/python3.9/site-packages (from essentia) (1.22.4)
-Requirement already satisfied: six in /usr/local/anaconda3/envs/kitap/lib/python3.9/site-packages (from essentia) (1.16.0)
-Requirement already satisfied: pyyaml in /usr/local/anaconda3/envs/kitap/lib/python3.9/site-packages (from essentia) (6.0)
-Building wheels for collected packages: essentia
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for essentia (setup.py) ... ?25l-
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
-?25h canceled
-<span class=" -Color -Color-Red">ERROR: Operation cancelled by user</span>
-
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[   INFO   ] MusicExtractorSVM: no classifier models were configured by default
 </pre></div>
 </div>
 </div>
@@ -884,7 +562,7 @@ Building wheels for collected packages: essentia
 </div>
 </div>
 <section id="baslangic-an-lar-i-tespiti">
-<h3>Başlangıç an(lar)ı tespiti<a class="headerlink" href="#baslangic-an-lar-i-tespiti" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">10.1.1. </span>Başlangıç an(lar)ı tespiti<a class="headerlink" href="#baslangic-an-lar-i-tespiti" title="Permalink to this headline">#</a></h3>
 <p>Bir kaydın içerisindeki ses öğelerinin (notaların) başlangıç anlarının tespitinde ses öğesinin karakteri önem taşımaktadır. Genel olarak ses öğelerini şu 4 ayrı kategoriden birinde olarak düşünürüz:</p>
 <ul class="simple">
 <li><p>Periyodik ve enerjisi ani değişen (İng: percussive), örnek: gitar veya piyano sesi</p></li>
@@ -1062,7 +740,7 @@ HFC_t = \sum_{k=0}^{N/2} k*|X_t[k]|
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7feb2ec79d90&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f94680812b0&gt;
 </pre></div>
 </div>
 <img alt="../_images/10_RitmikAnaliz_25_1.png" src="../_images/10_RitmikAnaliz_25_1.png" />
@@ -1120,7 +798,7 @@ HFC_t = \sum_{k=0}^{N/2} k*|X_t[k]|
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7feb2e6aa110&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f9461f98c40&gt;
 </pre></div>
 </div>
 <img alt="../_images/10_RitmikAnaliz_31_1.png" src="../_images/10_RitmikAnaliz_31_1.png" />
@@ -1154,10 +832,7 @@ HFC_t = \sum_{k=0}^{N/2} k*|X_t[k]|
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7feb2d8709d0&gt;
-</pre></div>
-</div>
-<img alt="../_images/10_RitmikAnaliz_36_1.png" src="../_images/10_RitmikAnaliz_36_1.png" />
+<img alt="../_images/10_RitmikAnaliz_36_0.png" src="../_images/10_RitmikAnaliz_36_0.png" />
 </div>
 </div>
 <p>Şekil 10.4: Ney kaydı, elle işaretlenmiş başlangıç anları (kırmızı dikey çizgiler) ve sinyalden hesaplanan frekans değişim fonksiyonu</p>
@@ -1169,7 +844,7 @@ HFC_t = \sum_{k=0}^{N/2} k*|X_t[k]|
 <p>Başlangıç anı tespiti ile ilgili temel kavramları ele almış olduk. Konu ilginizi çekti ise Türk Müziği ve Batı müziği enstrümanlarının kayıtlarında başlangıç anı tespit yöntemlerini ele alan bir çalışma için bakınız: <a class="reference external" href="https://gcris.iyte.edu.tr/bitstream/11147/2678/1/2678.pdf">Holzapfel et al, 2010</a>.</p>
 </section>
 <section id="tempo-ve-vurus-anlari-tespiti">
-<h3>Tempo ve vuruş anları tespiti<a class="headerlink" href="#tempo-ve-vurus-anlari-tespiti" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">10.1.2. </span>Tempo ve vuruş anları tespiti<a class="headerlink" href="#tempo-ve-vurus-anlari-tespiti" title="Permalink to this headline">#</a></h3>
 <p>Vuruş anlarını yukarıda bahsettiğimiz gibi müziğin altında yatan ritmik saatin tik-tak’ları olarak düşünebiliriz ve tempo da dakikadaki vuruşsayısına karşılık gelmektedir (İng: beats per minute (BPM)).</p>
 <p>Notalar farklı uzunluklarda olduğu ve arada sus’lar da bulunduğu için her vuruş anına bir nota başlangıç anı denk gelmemekle birlikte birçok müzik türünde çoğu nota başlangıç anı bir vuruşa denk gelmektedir. Diğer bir deyişle nota başlangıç anları ritim ızgarasının üzerine oturmaktadır. Peki elimizdeki bir kaydın ritim ızgarasını nasıl bulabiliriz? Öncelikle içinde sadece ritmik enstrüman icrası bulunduran bir kaydın spektral akısını dalga formu ile beraber çizdirelim. Bulduğumuz tempo değerini doğrulayabilmek için müzisyenin şarkının temposunu açıkça belirttiği bir kayıt kullanalım:
 <a class="reference external" href="https://www.youtube.com/watch?v=HTmKgbT3PFA&amp;">https://www.youtube.com/watch?v=HTmKgbT3PFA&amp;</a></p>
@@ -1181,12 +856,7 @@ HFC_t = \sum_{k=0}^{N/2} k*|X_t[k]|
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Collecting youtube_dl
-  Downloading youtube_dl-2021.12.17-py2.py3-none-any.whl (1.9 MB)
-     |████████████████████████████████| 1.9 MB 10.8 MB/s 
-?25hInstalling collected packages: youtube-dl
-Successfully installed youtube-dl-2021.12.17
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: youtube_dl in /home/baris/miniconda3/envs/KitapYazim/lib/python3.9/site-packages (2021.12.17)
 </pre></div>
 </div>
 </div>
@@ -1211,11 +881,221 @@ Successfully installed youtube-dl-2021.12.17
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[youtube] HTmKgbT3PFA: Downloading webpage
-[download] Destination: 120 BPM - Simple Straight Beat - Drum Track _ Loop-HTmKgbT3PFA.m4a
-[download] 100% of 4.82MiB in 01:56
-[ffmpeg] Correcting container in &quot;120 BPM - Simple Straight Beat - Drum Track _ Loop-HTmKgbT3PFA.m4a&quot;
-[ffmpeg] Destination: 120 BPM - Simple Straight Beat - Drum Track _ Loop-HTmKgbT3PFA.mp3
-Deleting original file 120 BPM - Simple Straight Beat - Drum Track _ Loop-HTmKgbT3PFA.m4a (pass -k to keep)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[download] Resuming download at byte 2658004
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[download] Destination: 120 BPM - Simple Straight Beat - Drum Track _ Loop-HTmKgbT3PFA.m4a
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[download]  52.7% of 4.82MiB at  5.93KiB/s ETA 06:33
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[download]  52.7% of 4.82MiB at 17.28KiB/s ETA 02:15
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[download]  52.8% of 4.82MiB at 32.01KiB/s ETA 01:12
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[download]  52.9% of 4.82MiB at 66.25KiB/s ETA 00:35
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[download]  53.3% of 4.82MiB at 67.33KiB/s ETA 00:34
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[download]  53.9% of 4.82MiB at 57.44KiB/s ETA 00:39
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[download]  54.9% of 4.82MiB at 48.43KiB/s ETA 00:45
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[download]  55.7% of 4.82MiB at 52.08KiB/s ETA 00:41
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[download]  57.1% of 4.82MiB at 51.99KiB/s ETA 00:40
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[download]  58.1% of 4.82MiB at 52.66KiB/s ETA 00:39
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[download]  59.3% of 4.82MiB at 51.10KiB/s ETA 00:39
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[download]  60.2% of 4.82MiB at 50.69KiB/s ETA 00:38
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[download]  61.1% of 4.82MiB at 50.78KiB/s ETA 00:37
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[download]  62.2% of 4.82MiB at 51.11KiB/s ETA 00:36
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[download]  63.3% of 4.82MiB at 51.72KiB/s ETA 00:35
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[download]  64.5% of 4.82MiB at 51.14KiB/s ETA 00:34
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[download]  65.4% of 4.82MiB at 51.04KiB/s ETA 00:33
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[download]  66.4% of 4.82MiB at 51.22KiB/s ETA 00:32
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[download]  67.5% of 4.82MiB at 51.64KiB/s ETA 00:31
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[download]  68.7% of 4.82MiB at 51.21KiB/s ETA 00:30
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[download]  69.6% of 4.82MiB at 51.12KiB/s ETA 00:29
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[download]  70.6% of 4.82MiB at 51.24KiB/s ETA 00:28
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[download]  71.7% of 4.82MiB at 51.57KiB/s ETA 00:27
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[download]  72.9% of 4.82MiB at 51.22KiB/s ETA 00:26
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[download]  73.8% of 4.82MiB at 51.15KiB/s ETA 00:25
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[download]  74.8% of 4.82MiB at 51.19KiB/s ETA 00:24
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[download]  75.9% of 4.82MiB at 51.37KiB/s ETA 00:23
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[download]  77.0% of 4.82MiB at 51.01KiB/s ETA 00:22
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[download]  77.9% of 4.82MiB at 51.56KiB/s ETA 00:21
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_32444</span><span class="o">/</span><span class="mf">1545351780.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="p">}</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="k">with</span> <span class="n">youtube_dl</span><span class="o">.</span><span class="n">YoutubeDL</span><span class="p">(</span><span class="n">ydl_opts</span><span class="p">)</span> <span class="k">as</span> <span class="n">ydl</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">13</span>     <span class="n">ydl</span><span class="o">.</span><span class="n">download</span><span class="p">([</span><span class="s1">&#39;https://www.youtube.com/watch?v=HTmKgbT3PFA&amp;&#39;</span><span class="p">])</span>
+
+<span class="nn">~/miniconda3/envs/KitapYazim/lib/python3.9/site-packages/youtube_dl/YoutubeDL.py</span> in <span class="ni">download</span><span class="nt">(self, url_list)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2066</span>             <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">2067</span>                 <span class="c1"># It also downloads the videos</span>
+<span class="ne">-&gt; </span><span class="mi">2068</span>                 <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">extract_info</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">2069</span>                     <span class="n">url</span><span class="p">,</span> <span class="n">force_generic_extractor</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;force_generic_extractor&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">))</span>
+<span class="g g-Whitespace">   </span><span class="mi">2070</span>             <span class="k">except</span> <span class="n">UnavailableVideoError</span><span class="p">:</span>
+
+<span class="nn">~/miniconda3/envs/KitapYazim/lib/python3.9/site-packages/youtube_dl/YoutubeDL.py</span> in <span class="ni">extract_info</span><span class="nt">(self, url, download, ie_key, extra_info, process, force_generic_extractor)</span>
+<span class="g g-Whitespace">    </span><span class="mi">806</span>                                     <span class="s1">&#39;and will probably not work.&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">807</span> 
+<span class="ne">--&gt; </span><span class="mi">808</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__extract_info</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">ie</span><span class="p">,</span> <span class="n">download</span><span class="p">,</span> <span class="n">extra_info</span><span class="p">,</span> <span class="n">process</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">809</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">810</span>             <span class="bp">self</span><span class="o">.</span><span class="n">report_error</span><span class="p">(</span><span class="s1">&#39;no suitable InfoExtractor for URL </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">url</span><span class="p">)</span>
+
+<span class="nn">~/miniconda3/envs/KitapYazim/lib/python3.9/site-packages/youtube_dl/YoutubeDL.py</span> in <span class="ni">wrapper</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">813</span>         <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">814</span>             <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">815</span>                 <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">816</span>             <span class="k">except</span> <span class="n">GeoRestrictedError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">817</span>                 <span class="n">msg</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">msg</span>
+
+<span class="nn">~/miniconda3/envs/KitapYazim/lib/python3.9/site-packages/youtube_dl/YoutubeDL.py</span> in <span class="ni">__extract_info</span><span class="nt">(self, url, ie, download, extra_info, process)</span>
+<span class="g g-Whitespace">    </span><span class="mi">845</span>         <span class="bp">self</span><span class="o">.</span><span class="n">add_default_extra_info</span><span class="p">(</span><span class="n">ie_result</span><span class="p">,</span> <span class="n">ie</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">846</span>         <span class="k">if</span> <span class="n">process</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">847</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">process_ie_result</span><span class="p">(</span><span class="n">ie_result</span><span class="p">,</span> <span class="n">download</span><span class="p">,</span> <span class="n">extra_info</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">848</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">849</span>             <span class="k">return</span> <span class="n">ie_result</span>
+
+<span class="nn">~/miniconda3/envs/KitapYazim/lib/python3.9/site-packages/youtube_dl/YoutubeDL.py</span> in <span class="ni">process_ie_result</span><span class="nt">(self, ie_result, download, extra_info)</span>
+<span class="g g-Whitespace">    </span><span class="mi">879</span>         <span class="k">if</span> <span class="n">result_type</span> <span class="o">==</span> <span class="s1">&#39;video&#39;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">880</span>             <span class="bp">self</span><span class="o">.</span><span class="n">add_extra_info</span><span class="p">(</span><span class="n">ie_result</span><span class="p">,</span> <span class="n">extra_info</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">881</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">process_video_result</span><span class="p">(</span><span class="n">ie_result</span><span class="p">,</span> <span class="n">download</span><span class="o">=</span><span class="n">download</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">882</span>         <span class="k">elif</span> <span class="n">result_type</span> <span class="o">==</span> <span class="s1">&#39;url&#39;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">883</span>             <span class="c1"># We have to add extra_info to the results because it may be</span>
+
+<span class="nn">~/miniconda3/envs/KitapYazim/lib/python3.9/site-packages/youtube_dl/YoutubeDL.py</span> in <span class="ni">process_video_result</span><span class="nt">(self, info_dict, download)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1690</span>                 <span class="n">new_info</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">info_dict</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1691</span>                 <span class="n">new_info</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="nb">format</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1692</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">process_info</span><span class="p">(</span><span class="n">new_info</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1693</span>         <span class="c1"># We update the info dict with the best quality format (backwards compatibility)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1694</span>         <span class="n">info_dict</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">formats_to_download</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="nn">~/miniconda3/envs/KitapYazim/lib/python3.9/site-packages/youtube_dl/YoutubeDL.py</span> in <span class="ni">process_info</span><span class="nt">(self, info_dict)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1974</span>                 <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1975</span>                     <span class="c1"># Just a single file</span>
+<span class="ne">-&gt; </span><span class="mi">1976</span>                     <span class="n">success</span> <span class="o">=</span> <span class="n">dl</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">info_dict</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1977</span>             <span class="k">except</span> <span class="p">(</span><span class="n">compat_urllib_error</span><span class="o">.</span><span class="n">URLError</span><span class="p">,</span> <span class="n">compat_http_client</span><span class="o">.</span><span class="n">HTTPException</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">error</span><span class="p">)</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1978</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">report_error</span><span class="p">(</span><span class="s1">&#39;unable to download video data: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">error_to_compat_str</span><span class="p">(</span><span class="n">err</span><span class="p">))</span>
+
+<span class="nn">~/miniconda3/envs/KitapYazim/lib/python3.9/site-packages/youtube_dl/YoutubeDL.py</span> in <span class="ni">dl</span><span class="nt">(name, info)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1913</span>                     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;verbose&#39;</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1914</span>                         <span class="bp">self</span><span class="o">.</span><span class="n">to_screen</span><span class="p">(</span><span class="s1">&#39;[debug] Invoking downloader on </span><span class="si">%r</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">info</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;url&#39;</span><span class="p">))</span>
+<span class="ne">-&gt; </span><span class="mi">1915</span>                     <span class="k">return</span> <span class="n">fd</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">info</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1916</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1917</span>                 <span class="k">if</span> <span class="n">info_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;requested_formats&#39;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">~/miniconda3/envs/KitapYazim/lib/python3.9/site-packages/youtube_dl/downloader/common.py</span> in <span class="ni">download</span><span class="nt">(self, filename, info_dict)</span>
+<span class="g g-Whitespace">    </span><span class="mi">364</span>             <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">sleep_interval</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">365</span> 
+<span class="ne">--&gt; </span><span class="mi">366</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">real_download</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">info_dict</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">367</span> 
+<span class="g g-Whitespace">    </span><span class="mi">368</span>     <span class="k">def</span> <span class="nf">real_download</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">info_dict</span><span class="p">):</span>
+
+<span class="nn">~/miniconda3/envs/KitapYazim/lib/python3.9/site-packages/youtube_dl/downloader/http.py</span> in <span class="ni">real_download</span><span class="nt">(self, filename, info_dict)</span>
+<span class="g g-Whitespace">    </span><span class="mi">350</span>             <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">351</span>                 <span class="n">establish_connection</span><span class="p">()</span>
+<span class="ne">--&gt; </span><span class="mi">352</span>                 <span class="k">return</span> <span class="n">download</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">353</span>             <span class="k">except</span> <span class="n">RetryDownload</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">354</span>                 <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="nn">~/miniconda3/envs/KitapYazim/lib/python3.9/site-packages/youtube_dl/downloader/http.py</span> in <span class="ni">download</span><span class="nt">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">236</span>                 <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">237</span>                     <span class="c1"># Download and write</span>
+<span class="ne">--&gt; </span><span class="mi">238</span>                     <span class="n">data_block</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">block_size</span> <span class="k">if</span> <span class="n">data_len</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="nb">min</span><span class="p">(</span><span class="n">block_size</span><span class="p">,</span> <span class="n">data_len</span> <span class="o">-</span> <span class="n">byte_counter</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">239</span>                 <span class="c1"># socket.timeout is a subclass of socket.error but may not have</span>
+<span class="g g-Whitespace">    </span><span class="mi">240</span>                 <span class="c1"># errno set</span>
+
+<span class="nn">~/miniconda3/envs/KitapYazim/lib/python3.9/http/client.py</span> in <span class="ni">read</span><span class="nt">(self, amt)</span>
+<span class="g g-Whitespace">    </span><span class="mi">461</span>             <span class="c1"># Amount is given, implement using readinto</span>
+<span class="g g-Whitespace">    </span><span class="mi">462</span>             <span class="n">b</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">amt</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">463</span>             <span class="n">n</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">readinto</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">464</span>             <span class="k">return</span> <span class="nb">memoryview</span><span class="p">(</span><span class="n">b</span><span class="p">)[:</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">tobytes</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">465</span>         <span class="k">else</span><span class="p">:</span>
+
+<span class="nn">~/miniconda3/envs/KitapYazim/lib/python3.9/http/client.py</span> in <span class="ni">readinto</span><span class="nt">(self, b)</span>
+<span class="g g-Whitespace">    </span><span class="mi">505</span>         <span class="c1"># connection, and the user is reading more bytes than will be provided</span>
+<span class="g g-Whitespace">    </span><span class="mi">506</span>         <span class="c1"># (for example, reading in 1k chunks)</span>
+<span class="ne">--&gt; </span><span class="mi">507</span>         <span class="n">n</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fp</span><span class="o">.</span><span class="n">readinto</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">508</span>         <span class="k">if</span> <span class="ow">not</span> <span class="n">n</span> <span class="ow">and</span> <span class="n">b</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">509</span>             <span class="c1"># Ideally, we would raise IncompleteRead if the content-length</span>
+
+<span class="nn">~/miniconda3/envs/KitapYazim/lib/python3.9/socket.py</span> in <span class="ni">readinto</span><span class="nt">(self, b)</span>
+<span class="g g-Whitespace">    </span><span class="mi">702</span>         <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">703</span>             <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">704</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sock</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">705</span>             <span class="k">except</span> <span class="n">timeout</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">706</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_timeout_occurred</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="nn">~/miniconda3/envs/KitapYazim/lib/python3.9/ssl.py</span> in <span class="ni">recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1239</span>                   <span class="s2">&quot;non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span>
+<span class="g g-Whitespace">   </span><span class="mi">1240</span>                   <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1241</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">nbytes</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1242</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1243</span>             <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">nbytes</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+
+<span class="nn">~/miniconda3/envs/KitapYazim/lib/python3.9/ssl.py</span> in <span class="ni">read</span><span class="nt">(self, len, buffer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1097</span>         <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1098</span>             <span class="k">if</span> <span class="n">buffer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1099</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1100</span>             <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1101</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
 </div>
 </div>
@@ -1591,7 +1471,7 @@ Deleting original file Play-along Backing Track - G Major New Orleans Blues 100b
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">5b) Entonasyon Analizi</p>
+            <p class="prev-next-title"><span class="section-number">9. </span>Entonasyon Analizi</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="Ek1_PythonHizliTekrar.html" title="next page">

@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -62,16 +64,6 @@ const thebe_selector_output = ".output, .cell_output"
 
     <!-- Google Analytics -->
     
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
-<script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-196606878-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
-
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
 <!-- Checkboxes to toggle the left sidebar -->
@@ -125,24 +117,12 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Python ile sayısal sinyal işlemeye giriş
- </span>
-</p>
-<ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1_TemelSinyaller_TemelIslemler.html">
-   1. Temel Sinyaller, Temel İşlemler
+   Temel Sinyaller, Temel İşlemler
   </a>
  </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Sayısal Sistemler
- </span>
-</p>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="2_SayisalSistemlereGiris.html">
    Sayısal Sistemlere Giriş
@@ -153,13 +133,6 @@ const thebe_selector_output = ".output, .cell_output"
    Z-Dönüşümü ve Sistemler
   </a>
  </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Spektrum Analizi
- </span>
-</p>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="4_SinyallerinFrekansSpektrumAnalizi.html">
    Sinyal spektrum analizi
@@ -170,13 +143,6 @@ const thebe_selector_output = ".output, .cell_output"
    Müzik sinyalleri spektrum analizi
   </a>
  </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Müzik sinyali analiz: akustik öznitelikler
- </span>
-</p>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="6_AkustikParam_LowLevelFeats.html">
    Müzik sinyali akustik özniteliklere giriş
@@ -187,13 +153,6 @@ const thebe_selector_output = ".output, .cell_output"
    Akustik öznitelikler ile otomatik enstrüman tanıma
   </a>
  </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Müzik ezgi boyutu analizi
- </span>
-</p>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="8_EzgiAnalizi_FrekansKestirimi.html">
    Temel titreşim frekans kestirimi
@@ -204,25 +163,11 @@ const thebe_selector_output = ".output, .cell_output"
    Entonasyon Analizi
   </a>
  </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Müzik ritim boyutu analizi
- </span>
-</p>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="10_RitmikAnaliz.html">
    Ritmik Analiz
   </a>
  </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Ekler
- </span>
-</p>
-<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Ek1_PythonHizliTekrar.html">
    Ek-1 Python Hızlı Tekrar
@@ -718,7 +663,7 @@ Dizi türü:  &lt;class &#39;numpy.ndarray&#39;&gt; , .dtype =  complex128 , .nd
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Liste kullanılarak harcanan süre:
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.46 ms ± 909 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8.23 ms ± 489 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
 </pre></div>
 </div>
 </div>
@@ -736,7 +681,7 @@ Dizi türü:  &lt;class &#39;numpy.ndarray&#39;&gt; , .dtype =  complex128 , .nd
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Numpy-dizisi kullanılarak harcanan süre:
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>587 µs ± 36.5 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>772 µs ± 31 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1007,9 +952,9 @@ Sonraki boyut: (3, 2)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.8343158 , 0.50699431, 0.21545508],
-       [0.96016336, 0.79413781, 0.0831246 ],
-       [0.66065098, 0.87933003, 0.86396948]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.42290345, 0.66066906, 0.29844157],
+       [0.84889022, 0.58781538, 0.02812666],
+       [0.99562149, 0.50175768, 0.02401576]])
 </pre></div>
 </div>
 </div>
@@ -1027,8 +972,8 @@ Sonraki boyut: (3, 2)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Min:  0.08312459887496881 , Max:  0.9601633624923567 , Mean:  0.6442379389587594
-Min:  0.08312459887496881 , Max:  0.9601633624923567 , Mean:  0.6442379389587594
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Min:  0.024015764555956 , Max:  0.9956214856400418 , Mean:  0.485360140624431
+Min:  0.024015764555956 , Max:  0.9956214856400418 , Mean:  0.485360140624431
 </pre></div>
 </div>
 </div>
@@ -1042,13 +987,13 @@ Min:  0.08312459887496881 , Max:  0.9601633624923567 , Mean:  0.6442379389587594
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.exp(a) =  [[2.30323764 1.66029336 1.24042626]
- [2.61212316 2.21253255 1.0866772 ]
- [1.93605225 2.40928501 2.37255986]] 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.exp(a) =  [[1.52638691 1.93608725 1.34775679]
+ [2.33705179 1.80005169 1.02852595]
+ [2.70640581 1.65162174 1.02430647]] 
 
-np.sqrt(a) =  [[0.91340889 0.71203533 0.46417139]
- [0.97987926 0.8911441  0.28831337]
- [0.81280439 0.93772599 0.92949959]]
+np.sqrt(a) =  [[0.65031027 0.81281551 0.54629806]
+ [0.92135238 0.76669119 0.16771006]
+ [0.99780834 0.70834856 0.15497021]]
 </pre></div>
 </div>
 </div>
@@ -1132,12 +1077,12 @@ Endeks dizisini kullanarak seçilmiş veri: dizi[endeksler] =  [10 30 40]
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a =
- [[6. 7.]
- [0. 4.]] 
+ [[8. 5.]
+ [8. 2.]] 
 
 b =
- [[4. 0.]
- [9. 1.]]
+ [[3. 8.]
+ [2. 9.]]
 </pre></div>
 </div>
 </div>
@@ -1150,10 +1095,10 @@ b =
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[6., 7.],
-       [0., 4.],
-       [4., 0.],
-       [9., 1.]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[8., 5.],
+       [8., 2.],
+       [3., 8.],
+       [2., 9.]])
 </pre></div>
 </div>
 </div>
@@ -1166,8 +1111,8 @@ b =
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[6., 7., 4., 0.],
-       [0., 4., 9., 1.]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[8., 5., 3., 8.],
+       [8., 2., 2., 9.]])
 </pre></div>
 </div>
 </div>

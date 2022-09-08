@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -62,16 +64,6 @@ const thebe_selector_output = ".output, .cell_output"
 
     <!-- Google Analytics -->
     
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
-<script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-196606878-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
-
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
 <!-- Checkboxes to toggle the left sidebar -->
@@ -125,24 +117,12 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Python ile sayısal sinyal işlemeye giriş
- </span>
-</p>
-<ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1_TemelSinyaller_TemelIslemler.html">
-   1. Temel Sinyaller, Temel İşlemler
+   Temel Sinyaller, Temel İşlemler
   </a>
  </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Sayısal Sistemler
- </span>
-</p>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="2_SayisalSistemlereGiris.html">
    Sayısal Sistemlere Giriş
@@ -153,13 +133,6 @@ const thebe_selector_output = ".output, .cell_output"
    Z-Dönüşümü ve Sistemler
   </a>
  </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Spektrum Analizi
- </span>
-</p>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="4_SinyallerinFrekansSpektrumAnalizi.html">
    Sinyal spektrum analizi
@@ -170,13 +143,6 @@ const thebe_selector_output = ".output, .cell_output"
    Müzik sinyalleri spektrum analizi
   </a>
  </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Müzik sinyali analiz: akustik öznitelikler
- </span>
-</p>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="6_AkustikParam_LowLevelFeats.html">
    Müzik sinyali akustik özniteliklere giriş
@@ -187,13 +153,6 @@ const thebe_selector_output = ".output, .cell_output"
    Akustik öznitelikler ile otomatik enstrüman tanıma
   </a>
  </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Müzik ezgi boyutu analizi
- </span>
-</p>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="8_EzgiAnalizi_FrekansKestirimi.html">
    Temel titreşim frekans kestirimi
@@ -204,25 +163,11 @@ const thebe_selector_output = ".output, .cell_output"
    Entonasyon Analizi
   </a>
  </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Müzik ritim boyutu analizi
- </span>
-</p>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="10_RitmikAnaliz.html">
    Ritmik Analiz
   </a>
  </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Ekler
- </span>
-</p>
-<ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Ek-1 Python Hızlı Tekrar
@@ -1349,7 +1294,9 @@ Listenin son iki elemanı: listem[-2:] =  [True, &#39;ayva&#39;]
 20
 30
 40
-50
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>50
 60
 70
 80
@@ -1464,7 +1411,7 @@ Altta verilen listenin içeriğindeki sadece 10’a tam bölünen sayıları ta�
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Toplam küme: {&#39;Hakan&#39;, &#39;Ahmet&#39;, &#39;Eylem&#39;, &#39;Seçil&#39;, &#39;Barış&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Toplam küme: {&#39;Ahmet&#39;, &#39;Hakan&#39;, &#39;Seçil&#39;, &#39;Eylem&#39;, &#39;Barış&#39;}
 </pre></div>
 </div>
 </div>
@@ -1480,10 +1427,10 @@ Altta verilen listenin içeriğindeki sadece 10’a tam bölünen sayıları ta�
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kümenin elemanları/öğeleri:
-Hakan
 Ahmet
-Eylem
+Hakan
 Seçil
+Eylem
 Barış
 </pre></div>
 </div>
@@ -1502,9 +1449,9 @@ Barış
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Hakan&#39;, &#39;Ahmet&#39;, &#39;Eylem&#39;, &#39;Seçil&#39;, &#39;Barış&#39;}
-{&#39;Selin&#39;, &#39;Hakan&#39;, &#39;Ahmet&#39;, &#39;Eylem&#39;, &#39;Seçil&#39;, &#39;Barış&#39;}
-{&#39;Selin&#39;, &#39;Ahmet&#39;, &#39;Eylem&#39;, &#39;Seçil&#39;, &#39;Barış&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Ahmet&#39;, &#39;Hakan&#39;, &#39;Seçil&#39;, &#39;Eylem&#39;, &#39;Barış&#39;}
+{&#39;Ahmet&#39;, &#39;Hakan&#39;, &#39;Seçil&#39;, &#39;Eylem&#39;, &#39;Selin&#39;, &#39;Barış&#39;}
+{&#39;Ahmet&#39;, &#39;Seçil&#39;, &#39;Eylem&#39;, &#39;Selin&#39;, &#39;Barış&#39;}
 </pre></div>
 </div>
 </div>
@@ -1588,10 +1535,10 @@ kume = set()</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0  endeksli isim  Selin
-1  endeksli isim  Ahmet
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0  endeksli isim  Ahmet
+1  endeksli isim  Seçil
 2  endeksli isim  Eylem
-3  endeksli isim  Seçil
+3  endeksli isim  Selin
 4  endeksli isim  Barış
 </pre></div>
 </div>
@@ -1751,23 +1698,23 @@ g  -&gt;  gamma
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.2549970930350798
-0.35757639898524274
-0.877794517390342
-0.10524365323556162
-0.9570857853994706
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9604036038122562
+0.25685679662602756
+0.36181952017380326
+0.72599519701647
+0.359296801983352
 
-1
-1
-9
-3
+2
+6
+10
+7
 10
 
-95
-20
-45
-40
-45
+90
+60
+5
+80
+5
 </pre></div>
 </div>
 </div>
@@ -1789,7 +1736,7 @@ g  -&gt;  gamma
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000 adet rasgele dart ile deney yapıldı:
-Pi =  3.114
+Pi =  3.144
 </pre></div>
 </div>
 </div>
@@ -1818,9 +1765,14 @@ Bir yazı/tura atma deneyi tasarlayın: ardarda 3 tura gelinceye kadar yazı/tur
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tura
+yazı
+tura
+yazı
+yazı
 tura
 tura
-Deney sayisi =  3
+tura
+Deney sayisi =  8
 ---Oyun Bitti---
 </pre></div>
 </div>
@@ -1837,7 +1789,7 @@ Deney sayisi =  3
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Verilerden seçilen örnekler:  [90, 80, 30, 70, 20]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Verilerden seçilen örnekler:  [20, 30, 60, 40, 90]
 </pre></div>
 </div>
 </div>
@@ -1856,8 +1808,8 @@ Deney sayisi =  3
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Eğitim için kullanılan veriler:  [50, 80, 60, 30, 90, 100, 70]
-Test için kullanılan veriler:  [20, 40, 10]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Eğitim için kullanılan veriler:  [80, 60, 70, 90, 40, 30, 50]
+Test için kullanılan veriler:  [20, 100, 10]
 </pre></div>
 </div>
 </div>
