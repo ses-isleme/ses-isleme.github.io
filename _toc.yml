@@ -2,40 +2,40 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: notebooks/0_Giris
+root: notebooks/00_Giris
 parts:
 - caption: Python ile sayısal sinyal işlemeye giriş
   numbered: true
   chapters:
-  - file: notebooks/1_TemelSinyaller_TemelIslemler
+  - file: notebooks/01_TemelSinyaller_TemelIslemler
     title: Temel Sinyaller, Temel İşlemler
 - caption: Sayısal Sistemler
   numbered: true
   chapters:
-  - file: notebooks/2_SayisalSistemlereGiris
+  - file: notebooks/02_SayisalSistemlereGiris
     title: Sayısal Sistemlere Giriş
-  - file: notebooks/3_ZDonusumuVeSistemler
+  - file: notebooks/03_ZDonusumuVeSistemler
     title: Z-Dönüşümü ve Sistemler
 - caption: Spektrum Analizi
   numbered: true
   chapters:
-  - file: notebooks/4_SinyallerinFrekansSpektrumAnalizi
+  - file: notebooks/04_SinyallerinFrekansSpektrumAnalizi
     title: Sinyal spektrum analizi
-  - file: notebooks/5_MuzikSinyalleriSpektrumu
+  - file: notebooks/05_MuzikSinyalleriSpektrumu
     title: Müzik sinyalleri spektrum analizi
 - caption: 'Müzik sinyali analiz: akustik öznitelikler'
   numbered: true
   chapters:
-  - file: notebooks/6_AkustikParam_LowLevelFeats
+  - file: notebooks/06_AkustikParam_LowLevelFeats
     title: Müzik sinyali akustik özniteliklere giriş
-  - file: notebooks/7_OtomatikEnstrumanTanima
+  - file: notebooks/07_OtomatikEnstrumanTanima
     title: Akustik öznitelikler ile otomatik enstrüman tanıma
 - caption: Müzik ezgi boyutu analizi
   numbered: true
   chapters:
-  - file: notebooks/8_EzgiAnalizi_FrekansKestirimi
+  - file: notebooks/08_EzgiAnalizi_FrekansKestirimi
     title: Temel titreşim frekans kestirimi
-  - file: notebooks/9_EntonasyonAnalizi
+  - file: notebooks/09_EntonasyonAnalizi
     title: Entonasyon Analizi
 - caption: Müzik ritim boyutu analizi
   numbered: true
