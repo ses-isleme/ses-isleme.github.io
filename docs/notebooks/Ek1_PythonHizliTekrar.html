@@ -50,8 +50,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -449,6 +447,11 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kumeler-sets">
+   6) Kümeler (sets))
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#python-da-dictionary-kolleksiyonu">
    7) Python’da ‘dictionary’ kolleksiyonu
   </a>
@@ -505,6 +508,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#list-ler-ve-list-degerlerine-erisim">
    5) List’ler ve list değerlerine erişim
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kumeler-sets">
+   6) Kümeler (sets))
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1035,6 +1043,7 @@ Verilen bir pozitif tam sayının rakamları toplamını bulup döndüren bir fo
 </div>
 </div>
 </div>
+<p>Bazı fonksiyonlar için, kullanıcıya tüm girdileri tanımlamayıp bazıları için varsayılan bir değer kullanma ihtimalini sunmak isteyebilirsiniz. Aşağıdaki örnekte fonksiyon çağırılırken ikinci girdi (<span class="math notranslate nohighlight">\(y\)</span>) kullanımı opsiyoneldir; eğer girdi verildiyse verilen değer, verilmediyse fonksiyon tanımında belirtilen varsayılan değer kullanılır. Örneği inceleyiniz.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">toplama</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span> <span class="c1"># varsayılan değer kullanımı: y girilmez ise yerine 0 atanır, girilir ise girilen değer kullanılır</span>
@@ -1053,7 +1062,7 @@ Verilen bir pozitif tam sayının rakamları toplamını bulup döndüren bir fo
 </div>
 </div>
 </div>
-<p>Fonksiyonlarda parametreler/girdiler, isimleri kulanıldığında sıralamadan etkilenmeyecek şekilde kullanılabilirler</p>
+<p>Fonksiyonlarda parametreler/girdiler, isimleri kullanıldığında sıralamadan etkilenmeyecek şekilde kullanılabilirler</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">adi_yazdir</span><span class="p">(</span><span class="n">isim</span><span class="p">,</span> <span class="n">soyisim</span><span class="p">):</span>
@@ -1152,11 +1161,10 @@ carp(3, 5, 10, 6) =&gt;  900
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>aritmetikOrtalama(2, 4, 6) = 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>aritmetikOrtalama(2, 4, 6) =  4.0
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 4.0
-aritmetikOrtalama(5, 10, 15, 20, 25) =  15.0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>aritmetikOrtalama(5, 10, 15, 20, 25) =  15.0
 </pre></div>
 </div>
 </div>
@@ -1179,6 +1187,7 @@ aritmetikOrtalama(5, 10, 15, 20, 25) =  15.0
 </div>
 </div>
 </div>
+<p>Listelerin boyutu değiştirelebilir; eleman ekleyebilir veya çıkartabilirsiniz. Altta sadece ekleme işlemi için örnek sunuyoruz. Daha fazla işlem türü ve örnek için <a class="reference external" href="https://docs.python.org/3/tutorial/datastructures.html">bakınız</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Listenin ucuna eleman ekleme</span>
@@ -1194,7 +1203,7 @@ aritmetikOrtalama(5, 10, 15, 20, 25) =  15.0
 </div>
 </div>
 </div>
-<p>Verilerle işlem yaparken liste içeriğindeki verileri parçalara ayırma( <a class="reference external" href="https://railsware.com/blog/python-for-machine-learning-indexing-and-slicing-for-lists-tuples-strings-and-other-sequential-types/">slicing</a>)  adımlarına  ihtiyaç duyarız. Aşağıda bir listenin nasıl endekslendiği görselleştirilmiştir. Python, diğer birçok programlama dilinden negatif endeks kullanma opsiyonu sunmasıyla ayrışır. Dizinin altında belirtilen negatif değerlerini ve örnekleri inceleyiniz.</p>
+<p>Verilerle işlem yaparken liste içeriğindeki verileri parçalara ayırma( <a class="reference external" href="https://railsware.com/blog/python-for-machine-learning-indexing-and-slicing-for-lists-tuples-strings-and-other-sequential-types/">slicing</a>)  adımlarına  ihtiyaç duyarız. Aşağıda bir listenin nasıl endekslendiği görselleştirilmiştir. Python, diğer birçok programlama dilinden negatif endeks kullanma opsiyonu sunmasıyla ayrışır. Dizinin altında belirtilen negatif endeks değerlerini ve örnekleri inceleyiniz.</p>
 <p><img alt="alt text" src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/List-Slicing.jpg" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1222,15 +1231,15 @@ Listenin son iki elemanı: listem[-2:] =  [True, &#39;ayva&#39;]
 </div>
 </div>
 <p><strong>UYARI:</strong> Burada Matlab kullanıcıları Python’da yapacakları hesaplamalı uygulamalarda ana değişken türü olarak list kullanacaklarını düşünebilirler. Bu mümkün ama çok pratik değil. Daha sonraki örneklerde göreceğimiz gibi tercihimiz daha çok numpy-dizileri olacak.</p>
+<p>Listedeki bir elemanın endeksine ulaşmak isteyebilirsiniz:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Listedeki elemanın yerine ulaşım örneği</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Armut&#39;un yeri: &quot;</span><span class="p">,</span> <span class="n">listem</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;armut&#39;</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Armut&#39;un endeksi: &quot;</span><span class="p">,</span> <span class="n">listem</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;armut&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Armut&#39;un yeri:  1
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Armut&#39;un endeksi:  1
 </pre></div>
 </div>
 </div>
@@ -1251,7 +1260,7 @@ Listenin son iki elemanı: listem[-2:] =  [True, &#39;ayva&#39;]
 </div>
 </div>
 <p><img alt="alt text" src="https://railsware.com/blog/wp-content/uploads/2018/10/first-slice.png" /></p>
-<p><strong>UYGULAMA:</strong> Uzunluğunu bilmediğiniz listenin (yine ‘nums’ listesini kullanalım, uzunluğunu bilmediğimizi varsayalım) ilk ve son elemanını dışarıda bırakacak şekilde içeriğini yeni bir listeye kopyalayan bir kod parçası yazınız</p>
+<p><strong>UYGULAMA:</strong> Uzunluğunu bilmediğiniz listenin (yine ‘nums’ listesini kullanalım, uzunluğunu bilmediğimizi varsayalım) ilk ve son elemanını dışarıda bırakacak şekilde içeriğini yeni bir listeye eşleyen bir kod parçası yazınız.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kodunuzu buraya yazınız</span>
@@ -1313,7 +1322,7 @@ Listenin son iki elemanı: listem[-2:] =  [True, &#39;ayva&#39;]
 </div>
 </div>
 </div>
-<p><strong>“Iteration”</strong>: Python geleneksel for döngüleri yerine teker teker bir verilerin okunup kullanıldığı tekrarlar kullanır. Örnekle anlatmak/anlamak daha kolay olacak, alttaki örneği inceleyiniz. (veya <a class="reference external" href="https://towardsdatascience.com/python-basics-iteration-and-looping-6ca63b30835c">kaynak için tıklayınız</a>)</p>
+<p><strong>“Iteration”</strong>: Python geleneksel for döngüleri yerine teker teker verilerin okunup kullanıldığı döngüler kullanır. Örnekle anlatmak/anlamak daha kolay olacak, alttaki örneği inceleyiniz. (veya <a class="reference external" href="https://towardsdatascience.com/python-basics-iteration-and-looping-6ca63b30835c">kaynak için tıklayınız</a>)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span> <span class="c1"># Her döngüde num içerisine nums listesinden bir değer atanır</span>
@@ -1338,7 +1347,7 @@ Listenin son iki elemanı: listem[-2:] =  [True, &#39;ayva&#39;]
 <p>Bu birçok açıdan çok pratik bir uygulamadır. Gerekmedikçe endeks değişkenleri kullanılmaz, kod sadeleşir, endeks aşma hataları yapılmaz. Bu, Python ile veri işlerken çok sık kullanacağınız bir döngü yazma biçimidir. Hatta endeks kullanmak istediğinizde bile aynı yapıyı (iterator) kullanacaksınız. Örneği altta:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 5 boyutlu dizinin endeklerini oluşturan döngü</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 5 boyutlu dizinin endekslerini oluşturan döngü</span>
 <span class="k">for</span> <span class="n">endeks</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
   <span class="nb">print</span><span class="p">(</span><span class="n">endeks</span><span class="p">)</span>
 </pre></div>
@@ -1355,7 +1364,7 @@ Listenin son iki elemanı: listem[-2:] =  [True, &#39;ayva&#39;]
 </div>
 </div>
 <p>range() kullanımı ile ilgili bakınız: <a class="reference external" href="https://docs.python.org/3/library/functions.html#func-range">kaynak1</a>, <a class="reference external" href="https://pynative.com/python-range-function/">kaynak2</a></p>
-<p><strong>UYGULAMA:</strong> Bir işyeri sahibinin çalışma saatlerinin uzunluğuna göre ayrılan 3 kategoride çalışanı vardır. İlk kategorideki işçi ayda 5000 tl, ikinci kategorideki işçi 1000 tl ve üçüncü kategorideki işçi 50 tl almaktadır. Her kategoride en az bir işçi bulunmaktadır ve toplam işçi sayısı 100dür. İşyeri sahibi ayda toplam 100bin Tl maaş ödemesi yapmaktadır. Her kategoride kaç işçi bulunduğunu bir kod parçası yardımıyla bulunuz.  İpucu: for döngüleri kullanarak her olasılığı denemeyi düşünebilirsiniz. İçiçe for döngüleri kullanmanız gerekecektir.</p>
+<p><strong>UYGULAMA:</strong> Bir işyeri sahibinin çalışma saatlerinin uzunluğuna göre ayrılan 3 kategoride çalışanı vardır. İlk kategorideki işçi ayda 5000 tl, ikinci kategorideki işçi 1000 tl ve üçüncü kategorideki işçi 50 tl almaktadır. Her kategoride en az bir işçi bulunmaktadır ve toplam işçi sayısı 100dür. İşyeri sahibi ayda toplam 100bin Tl maaş ödemesi yapmaktadır. Her kategoride kaç işçi bulunduğunu bir kod parçası yardımıyla bulunuz.  <strong>İpucu:</strong> for döngüleri kullanarak her olasılığı denemeyi düşünebilirsiniz. İçiçe for döngüleri kullanmanız gerekecektir.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kodunuzu buraya yazınız</span>
@@ -1385,7 +1394,27 @@ Kategori 3 =  80  işçi
 </div>
 </div>
 </div>
-<p><strong>“List comprehension”</strong>: yeni bir listenin içeriğini oluştururken for döngüsünün kullanıldığı pratik bir yapı</p>
+<p>Birden fazla kolleksiyonu sıralı karıştırarak iterasyon yapmak da mümkün</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
+<span class="n">L2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;hop&#39;</span><span class="p">,</span><span class="s1">&#39;hop&#39;</span><span class="p">,</span><span class="s1">&#39;altın&#39;</span><span class="p">,</span><span class="s1">&#39;top&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="n">L2</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 hop
+2 hop
+3 altın
+4 top
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>‘List comprehension’:</strong></p>
+<p>Yeni bir listenin içeriğini oluştururken for döngüsünün kullanıldığı pratik bir yapı. Örneği inceleyiniz.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ornekDizi</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
@@ -1430,7 +1459,10 @@ Altta verilen listenin içeriğindeki sadece 10’a tam bölünen sayıları ta�
 </div>
 </div>
 </div>
-<p>Küme örneği (”<a class="reference external" href="https://www.geeksforgeeks.org/sets-in-python/">sets</a>”)</p>
+</section>
+<section id="kumeler-sets">
+<h2>6) Kümeler (<a class="reference external" href="https://www.geeksforgeeks.org/sets-in-python/">sets</a>))<a class="headerlink" href="#kumeler-sets" title="Permalink to this headline">#</a></h2>
+<p>Kümeler her bir elemanın bir kere yer alabildiği (aynı değerde iki farklı elemanı içermeyen) kolleksiyonlardır. Örnekleri inceleyiniz.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grup1</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Barış&quot;</span><span class="p">,</span> <span class="s2">&quot;Ahmet&quot;</span><span class="p">,</span> <span class="s2">&quot;Seçil&quot;</span><span class="p">}</span>
@@ -1441,7 +1473,7 @@ Altta verilen listenin içeriğindeki sadece 10’a tam bölünen sayıları ta�
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Toplam küme: {&#39;Ahmet&#39;, &#39;Eylem&#39;, &#39;Seçil&#39;, &#39;Barış&#39;, &#39;Hakan&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Toplam küme: {&#39;Seçil&#39;, &#39;Hakan&#39;, &#39;Eylem&#39;, &#39;Barış&#39;, &#39;Ahmet&#39;}
 </pre></div>
 </div>
 </div>
@@ -1457,11 +1489,11 @@ Altta verilen listenin içeriğindeki sadece 10’a tam bölünen sayıları ta�
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kümenin elemanları/öğeleri:
-Ahmet
-Eylem
 Seçil
-Barış
 Hakan
+Eylem
+Barış
+Ahmet
 </pre></div>
 </div>
 </div>
@@ -1479,9 +1511,9 @@ Hakan
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Ahmet&#39;, &#39;Eylem&#39;, &#39;Seçil&#39;, &#39;Barış&#39;, &#39;Hakan&#39;}
-{&#39;Ahmet&#39;, &#39;Eylem&#39;, &#39;Selin&#39;, &#39;Seçil&#39;, &#39;Barış&#39;, &#39;Hakan&#39;}
-{&#39;Ahmet&#39;, &#39;Eylem&#39;, &#39;Selin&#39;, &#39;Seçil&#39;, &#39;Barış&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Seçil&#39;, &#39;Hakan&#39;, &#39;Eylem&#39;, &#39;Barış&#39;, &#39;Ahmet&#39;}
+{&#39;Seçil&#39;, &#39;Hakan&#39;, &#39;Eylem&#39;, &#39;Barış&#39;, &#39;Ahmet&#39;, &#39;Selin&#39;}
+{&#39;Seçil&#39;, &#39;Eylem&#39;, &#39;Barış&#39;, &#39;Ahmet&#39;, &#39;Selin&#39;}
 </pre></div>
 </div>
 </div>
@@ -1512,7 +1544,7 @@ Hakan
 </div>
 </div>
 <p><strong>UYGULAMA:</strong></p>
-<p>Küme birleştirmede kullanılan union fonksiyonu kendiniz <em>yaz</em>ınız. Şu şekilde kullanılsın</p>
+<p>Küme birleştirmede kullanılan union fonksiyonu kendiniz <em>yaz</em>ınız. Şu şekilde kullanılsın:</p>
 <p>kume3 = birlestir(kume1,kume2)</p>
 <p>Kullanıcı kume2’yi girmediğinde bu küme boş küme olarak kullanılsın. Boş kümeyi şu şekilde tanımlayabilirsiniz:<br />
 kume = set()</p>
@@ -1528,7 +1560,7 @@ kume = set()</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title</span>
-<span class="k">def</span> <span class="nf">birlestir</span><span class="p">(</span><span class="n">kumeX</span><span class="p">,</span><span class="n">kumeY</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()):</span>
+<span class="k">def</span> <span class="nf">birlestir</span><span class="p">(</span><span class="n">kumeX</span><span class="p">,</span> <span class="n">kumeY</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()):</span>
   <span class="n">sonuc</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
   <span class="k">for</span> <span class="n">eleman</span> <span class="ow">in</span> <span class="n">kumeX</span><span class="p">:</span>
     <span class="n">sonuc</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">eleman</span><span class="p">)</span>
@@ -1551,7 +1583,9 @@ kume = set()</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 2, 3, 4}
-{1, 2, 3, 4, 6, 10}
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 2, 3, 4, 6, 10}
 </pre></div>
 </div>
 </div>
@@ -1565,47 +1599,27 @@ kume = set()</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0  endeksli isim  Ahmet
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0  endeksli isim  Seçil
 1  endeksli isim  Eylem
-2  endeksli isim  Selin
-3  endeksli isim  Seçil
-4  endeksli isim  Barış
+2  endeksli isim  Barış
+3  endeksli isim  Ahmet
+4  endeksli isim  Selin
 </pre></div>
 </div>
 </div>
 </div>
 <p><strong>‘Set comprehension’</strong></p>
+<p>Örnek olarak <em>karesinin değeri 30’un altında olan tamsayıları içeren bir küme</em> oluşturan bir ‘set comprehension’ satırı yazalım.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
+
 <span class="p">{</span><span class="nb">int</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">)}</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{0, 1, 2, 3, 4, 5}
-</pre></div>
-</div>
-</div>
-</div>
-<p>Birden fazla kolleksiyonu sıralı karıştırarak iterasyon yapmak da mümkün</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
-<span class="n">L2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;hop&#39;</span><span class="p">,</span><span class="s1">&#39;hop&#39;</span><span class="p">,</span><span class="s1">&#39;altın&#39;</span><span class="p">,</span><span class="s1">&#39;top&#39;</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="n">L2</span><span class="p">):</span>
-  <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> hop
-2 hop
-3 altın
-4 top
 </pre></div>
 </div>
 </div>
@@ -1629,9 +1643,6 @@ kume = set()</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Adana&#39;: 1, &#39;İstanbul&#39;: 34, &#39;İzmir&#39;: 35}
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -1673,10 +1684,7 @@ kume = set()</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -&gt;  alpha
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a  -&gt;  alpha
 o  -&gt;  omega
 g  -&gt;  gamma
 -----------
@@ -1688,7 +1696,7 @@ g  -&gt;  gamma
 </div>
 </div>
 <p><strong>Telefon rehberi örneği:</strong></p>
-<p>Kullanıcıdan rehber için isim ve numara okuyan, daha sonra isimle numara arama işlemi yapan kod parçası örneği görelim. Kodu çalıştırınız ve değerler giriniz.</p>
+<p>Kullanıcıdan rehber için isim ve numara okuyan, daha sonra isimle numara arama işlemi yapan kod parçası örneği görelim. <span class="math notranslate nohighlight">\(calistir\)</span> değişkenine True atadıktan sonra (ilk kod satırı) kodu çalıştırınız ve değerler giriniz. Giriş işlemlerini bitirmek için boş giriş yapmanız beklenmektedir.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Rehberin kullanıcıdan okunan bilgilerle oluşturulması</span>
@@ -1725,35 +1733,39 @@ g  -&gt;  gamma
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;random.random() ile üretilen sayılar:&#39;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-  <span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">())</span><span class="c1">#0-1 arası rasgele ondalık sayı üretimi</span>
-<span class="nb">print</span><span class="p">()</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">())</span> <span class="c1"># 0-1 arası rasgele ondalık sayı üretimi</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;random.randint(1,10) ile üretilen sayılar:&#39;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-  <span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span><span class="c1">#1-10 arası(dahil) rasgele tamsayı üretimi</span>
-<span class="nb">print</span><span class="p">()</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span> <span class="c1"># 1-10 arası(dahil) rasgele tamsayı üretimi</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;random.randrange(0,100,5) ile üretilen sayılar:&#39;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-  <span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span><span class="c1">#0-100 arası 5&#39;er adımlı uzaklıklarda rasgele tamsayı üretimi</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span> <span class="c1"># 0-100 arası 5&#39;er adımlı uzaklıklarda rasgele tamsayı üretimi</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5389689329896077
-0.945852261910828
-0.6547487438034277
-0.8460033410530118
-0.990114061490829
-
-8
-5
-6
-1
-8
-
-65
-75
-15
-20
-75
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>random.random() ile üretilen sayılar:
+0.9967261715288077
+0.9506427937669322
+0.9022699416325767
+0.506689464389918
+0.24101457024416117
+random.randint(1,10) ile üretilen sayılar:
+3
+4
+9
+7
+2
+random.randrange(0,100,5) ile üretilen sayılar:
+70
+35
+70
+50
+55
 </pre></div>
 </div>
 </div>
@@ -1777,7 +1789,7 @@ g  -&gt;  gamma
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000 adet rasgele dart ile deney yapıldı:
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pi =  3.1252
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pi =  3.1348
 </pre></div>
 </div>
 </div>
@@ -1805,19 +1817,27 @@ Bir yazı/tura atma deneyi tasarlayın: ardarda 3 tura gelinceye kadar yazı/tur
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>yazı
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tura
 yazı
 yazı
 tura
+yazı
+yazı
+yazı
 tura
 tura
-Deney sayisi =  6
+yazı
+tura
+tura
+tura
+Deney sayisi =  13
 ---Oyun Bitti---
 </pre></div>
 </div>
 </div>
 </div>
-<p>Verilerden rasgele örneklem seçme</p>
+<p><strong>Verilerden rasgele örneklem seçme</strong></p>
+<p>Örnek olarak verilen bir listedeki elemanlarının yarısını rasgele seçen bir kod parçası yazalım:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">veri</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">70</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">100</span><span class="p">]</span> <span class="c1"># verilerimizi içeren listeyi tanımladık</span>
@@ -1828,27 +1848,27 @@ Deney sayisi =  6
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Verilerden seçilen örnekler:  [80, 50, 70, 60, 100]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Verilerden seçilen örnekler:  [30, 80, 60, 50, 100]
 </pre></div>
 </div>
 </div>
 </div>
-<p>Rasgele örnek seçme makine öğrenmesinde sıkça kullanacağımız bir işlem. Ancak bunu numpy veya scikit-learn gibi kütüphanelerdeki fonksiyonlarla yapmak daha kolay olacağı için burada daha fazla detaya girmeyeceğiz. Kısa bir örneği altta bulabilirsiniz.</p>
+<p>Rasgele örnek seçme (örneğin eldeki verilerin eğitim ve test verisi olarak iki gruba bölünmesi) makine öğrenmesinde sıkça kullanacağımız bir işlem. Ancak bunu numpy veya scikit-learn gibi kütüphanelerdeki fonksiyonlarla yapmak daha kolay olacağı için burada daha fazla detaya girmeyeceğiz. Kısa bir örneği altta bulabilirsiniz.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
 <span class="kn">import</span> <span class="nn">numpy</span>
 
 <span class="n">veri_np</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">veri</span><span class="p">)</span>  <span class="c1"># veriyi listeden numpy dizisine dönüştürüyoruz</span>
-<span class="n">x_train</span> <span class="p">,</span><span class="n">x_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">veri</span><span class="p">,</span><span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">)</span> <span class="c1"># veriyi %30-%70 ayıran hazır fonksiyon</span>
+<span class="n">x_train</span> <span class="p">,</span><span class="n">x_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">veri</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">)</span> <span class="c1"># veriyi %30-%70 ayıran hazır fonksiyonun çağırılması</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Eğitim için kullanılan veriler: &#39;</span><span class="p">,</span> <span class="n">x_train</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Test için kullanılan veriler: &#39;</span><span class="p">,</span><span class="n">x_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Test için kullanılan veriler: &#39;</span><span class="p">,</span> <span class="n">x_test</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Eğitim için kullanılan veriler:  [90, 30, 40, 60, 70, 100, 20]
-Test için kullanılan veriler:  [10, 50, 80]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Eğitim için kullanılan veriler:  [100, 40, 10, 30, 80, 70, 20]
+Test için kullanılan veriler:  [90, 50, 60]
 </pre></div>
 </div>
 </div>

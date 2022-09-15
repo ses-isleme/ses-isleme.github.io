@@ -50,8 +50,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -678,7 +676,7 @@ Dizi türü:  &lt;class &#39;numpy.ndarray&#39;&gt; , .dtype =  complex128 , .nd
 </div>
 <p>Hafızada kaplanan yerin problem olduğu noktaya gelinceye kadar bu detayları gözardı edelim ve tür seçme işini numpy’a bırakalım.</p>
 <p>List varken neden numpy-array kullanalım? Birçok pratik neden var.  Nedenlerden birisi hız. Aşağıda, aynı işlemi (1’den 1 milyona kadar sayılar toplamı) liste kullanarak ve numpy-array kullanarak yapan kod örnekleri var.</p>
-<p><em>%timeit</em> işlemin aldığı ortalama süreyi hesaplamak için defalarca çalıştırıp, toplam süreyi tekrar çalıştırma sayısına bölerek elde ettiği ortalama süreyi ekrana yazdıracak. Liste kullanarak ve numpy-array kullanarak yapılan işlemler için harcanan süreleri karşılaştırınız.</p>
+<p><em>%timeit</em>, işlemin aldığı ortalama süreyi hesaplamak için işlemi defalarca çalıştırıp, toplam süreyi çalıştırma sayısına bölerek elde ettiği ortalama süreyi ekrana yazdıracak. Liste kullanarak ve numpy-array kullanarak yapılan işlemler için harcanan süreleri karşılaştırınız.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Büyük bir list için toplama işlemi hızını kontrol edelim</span>
@@ -692,7 +690,7 @@ Dizi türü:  &lt;class &#39;numpy.ndarray&#39;&gt; , .dtype =  complex128 , .nd
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Liste kullanılarak harcanan süre:
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.84 ms ± 34 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.91 ms ± 52.6 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
 </pre></div>
 </div>
 </div>
@@ -710,7 +708,7 @@ Dizi türü:  &lt;class &#39;numpy.ndarray&#39;&gt; , .dtype =  complex128 , .nd
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Numpy-dizisi kullanılarak harcanan süre:
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>730 µs ± 15.5 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>726 µs ± 3.5 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
 </pre></div>
 </div>
 </div>
@@ -776,7 +774,7 @@ Dizi türü:  &lt;class &#39;numpy.ndarray&#39;&gt; , .dtype =  complex128 , .nd
 </section>
 <section id="cok-boyutlu-diziler">
 <h3>Çok boyutlu diziler<a class="headerlink" href="#cok-boyutlu-diziler" title="Permalink to this headline">#</a></h3>
-<p>Yukarıdaki örneklerimiz tek boyutlu idi (özelleklier arasında <span class="math notranslate nohighlight">\(.ndim = 1\)</span> olarak gösteriliyordu).</p>
+<p>Yukarıdaki örneklerimiz tek boyutlu idi (özellikler arasında <span class="math notranslate nohighlight">\(.ndim = 1\)</span> olarak gösteriliyordu).</p>
 <p>Çok boyutlu dizileri çok farklı şekillerde yaratabilirsiniz. Altta ilk örnekte tüm elemanlar girilerek, ikinci örnekte önce tek boyutlu bir dizi yaratılıp daha sonra reshape() fonksiyonu ile iki boyutlu diziye dönüştürülerek diziler oluşturuluyor.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -809,7 +807,7 @@ Dizi türü:  &lt;class &#39;numpy.ndarray&#39;&gt; , .dtype =  int64 , .ndim = 
 </div>
 </div>
 <p><span class="math notranslate nohighlight">\(ndim\)</span> (number of dimensions) özelliği 2 değerini aldı. <span class="math notranslate nohighlight">\(size\)</span> eleman sayısını, <span class="math notranslate nohighlight">\(shape\)</span> ise oluşturduğumuz matrisin boyutlarını taşıyor.</p>
-<p>Elemanlara erişmek istediğimizde liste elemanlarına ulaşırken kullandığımız köşeli parantez içerisinde endeks kullanacağız. Önce tek boyutlu dizide örnek görelim:</p>
+<p>Elemanlara erişmek istediğimizde, liste elemanlarına ulaşırken kullandığımız gibi, köşeli parantez içerisinde endeks kullanacağız. Önce tek boyutlu dizide örnek görelim:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ornek_dizi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">12</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">36</span><span class="p">])</span>
@@ -847,6 +845,7 @@ ikinci satır, birinci sütun: a[1, 0] =  4
 </div>
 </div>
 </div>
+<p>Aşağıdaki hücrede dizi öğelerine iterasyonla ulaşan bir örnek göreceksiniz. Kodu ve çıktıyı inceleyiniz.</p>
 <p>İterasyon ile iki boyutlu dizi öğelerine erişmek istediğinizde ilk iterasyonun <span class="math notranslate nohighlight">\(s\)</span> değişkeni içerisine satırları döndüreceğini, daha sonra içteki döngüde satırdan tekil elemanların <span class="math notranslate nohighlight">\(d\)</span> değişkeni içerisine kopyalandığını göreceksiniz.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -921,7 +920,7 @@ Sonraki boyut: (3, 2)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sıfırla dolu dizi oluşturma</span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">));</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">));</span>
 <span class="n">a</span>
 </pre></div>
 </div>
@@ -937,7 +936,7 @@ Sonraki boyut: (3, 2)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Birlerle dolu, eleman türü int16 olan üç boyutlu dizi oluşturma </span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int16</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int16</span><span class="p">)</span>
 <span class="n">a</span>
 </pre></div>
 </div>
@@ -981,9 +980,9 @@ Sonraki boyut: (3, 2)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.75150705, 0.70642476, 0.14157995],
-       [0.85037995, 0.85930066, 0.20601405],
-       [0.0709617 , 0.8225801 , 0.43035024]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.08775681, 0.98411164, 0.86360851],
+       [0.11216769, 0.94166787, 0.74142646],
+       [0.28556525, 0.04994921, 0.44562624]])
 </pre></div>
 </div>
 </div>
@@ -991,18 +990,17 @@ Sonraki boyut: (3, 2)
 </section>
 <section id="numpy-dizi-isleme-fonksiyonlari">
 <h3>Numpy dizi işleme fonksiyonları<a class="headerlink" href="#numpy-dizi-isleme-fonksiyonlari" title="Permalink to this headline">#</a></h3>
+<p><em>Min, max, mean, sum, …</em> gibi işlemleri dizinin üzerinden çağırarak veya fonksiyon içerisine diziyi göndererek gerçekleştirebilirsiniz. Alttaki örnekleri inceleyiniz.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Min, max, mean, sum, ... gibi işlemleri dizinin üzerinden çağırarak </span>
-<span class="c1">#  veya fonksiyon içerisine diziyi göndererek gerçekleştirebilirsiniz</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Min: &#39;</span><span class="p">,</span><span class="n">a</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="s1">&#39;, Max: &#39;</span><span class="p">,</span><span class="n">a</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="s1">&#39;, Mean: &#39;</span><span class="p">,</span><span class="n">a</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Min: &#39;</span><span class="p">,</span><span class="n">a</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="s1">&#39;, Max: &#39;</span><span class="p">,</span><span class="n">a</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="s1">&#39;, Mean: &#39;</span><span class="p">,</span><span class="n">a</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Min: &#39;</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="s1">&#39;, Max: &#39;</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="s1">&#39;, Mean: &#39;</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Min:  0.07096170149179137 , Max:  0.8593006585622214 , Mean:  0.5376776065271716
-Min:  0.07096170149179137 , Max:  0.8593006585622214 , Mean:  0.5376776065271716
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Min:  0.049949205269434804 , Max:  0.9841116363288912 , Mean:  0.5013199634424971
+Min:  0.049949205269434804 , Max:  0.9841116363288912 , Mean:  0.5013199634424971
 </pre></div>
 </div>
 </div>
@@ -1016,13 +1014,13 @@ Min:  0.07096170149179137 , Max:  0.8593006585622214 , Mean:  0.5376776065271716
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.exp(a) =  [[2.12019284 2.02673223 1.15209261]
- [2.34053597 2.36150862 1.22877047]
- [1.07354011 2.27636553 1.53779603]] 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.exp(a) =  [[1.09172259 2.67543407 2.37170358]
+ [1.11870044 2.56425469 2.09892741]
+ [1.33051389 1.0512177  1.56146775]] 
 
-np.sqrt(a) =  [[0.86689506 0.84049078 0.37627111]
- [0.92216048 0.92698471 0.45388771]
- [0.26638638 0.90696202 0.65601085]]
+np.sqrt(a) =  [[0.29623775 0.99202401 0.92930539]
+ [0.33491446 0.97039573 0.86106124]
+ [0.53438306 0.22349319 0.66755243]]
 </pre></div>
 </div>
 </div>
@@ -1106,49 +1104,49 @@ Endeks dizisini kullanarak seçilmiş veri: dizi[endeksler] =  [10 30 40]
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a =
- [[9. 7.]
- [1. 2.]] 
+ [[3. 5.]
+ [8. 4.]] 
 
 b =
- [[1. 0.]
- [3. 4.]]
+ [[0. 5.]
+ [9. 8.]]
 </pre></div>
 </div>
 </div>
 </div>
+<p>Dikey birleştirme (İng: vertical stack), altalta koyar</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Dikey birleştirme (İng: vertical stack), altalta koyar</span>
-<span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[9., 7.],
-       [1., 2.],
-       [1., 0.],
-       [3., 4.]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[3., 5.],
+       [8., 4.],
+       [0., 5.],
+       [9., 8.]])
 </pre></div>
 </div>
 </div>
 </div>
+<p>Yatay birleştirme (İng: horizontal stack), yanyana koyar</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Yatay birleştirme (İng: horizontal stack), yanyan koyar</span>
-<span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[9., 7., 1., 0.],
-       [1., 2., 3., 4.]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[3., 5., 0., 5.],
+       [8., 4., 9., 8.]])
 </pre></div>
 </div>
 </div>
 </div>
 <section id="boolean-dizi-endeksleri-kullanmak">
 <h3>Boolean dizi endeksleri kullanmak<a class="headerlink" href="#boolean-dizi-endeksleri-kullanmak" title="Permalink to this headline">#</a></h3>
-<p>Sayıları kullandığımız gibi boolean değerleri de <span class="math notranslate nohighlight">\(True =&gt; dahil et\)</span> , <span class="math notranslate nohighlight">\(False =&gt; hariç bırak\)</span> anlamını taşıyacak şekilde kullanabiliriz. Örneği inceleyiniz.</p>
+<p>Sayıları kullandığımız gibi boolean değerleri de <span class="math notranslate nohighlight">\(True\)</span> =&gt; ‘dahil et’ , <span class="math notranslate nohighlight">\(False\)</span> =&gt; ‘hariç bırak’ anlamını taşıyacak şekilde kullanabiliriz. Örneği inceleyiniz.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ornek_dizi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
@@ -1162,7 +1160,7 @@ b =
 </div>
 </div>
 </div>
-<p>[ ] arasına yazılmış olan diziye ‘boolean index’ dizisi adı veriliyor. Ayrıca tanımlayıp kullanabilirdik:</p>
+<p>Yukarıda, [ ] arasına yazılmış olan diziye ‘boolean index’ dizisi adı veriliyor. Ayrıca tanımlayıp kullanabilirdik:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bool_endeks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span>
@@ -1203,7 +1201,7 @@ b =
 </div>
 </div>
 </div>
-<p>Doğrudan da (ayrıca bir boolean endeks dizisi tanımlamadan ama kullanarak) yazabilirdik</p>
+<p>Doğrudan da (ayrıca bir boolean endeks dizisi tanımlamadan, kuralı kullanarak) yazabilirdik</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">secilmis_dizi</span> <span class="o">=</span> <span class="n">ornek_dizi</span><span class="p">[</span><span class="n">ornek_dizi</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">]</span> <span class="c1"># örnek dizinin içerisinde 4&#39;ten büyük olanları al</span>
@@ -1219,7 +1217,7 @@ b =
 </div>
 <p><strong>Boolean diziler arasında mantık işlemleri:</strong></p>
 <p>Birden fazla kural kullanarak seçme yapmak istediğimizde boolean-endeks dizilerini mantık işlemleriyle birleştirmemiz gerekir.</p>
-<p><span class="math notranslate nohighlight">\(and, or, not\)</span> tekil True-False değerleriyle işlem yapar. ‘bitwise’ işlemler için kullanılan operatörler ise şunlardır: <span class="math notranslate nohighlight">\(&amp;(and), |(or), ~ (not)\)</span></p>
+<p><span class="math notranslate nohighlight">\(and, or, not\)</span> tekil True-False değerleriyle işlem yapar. ‘bitwise’ işlemler için kullanılan operatörler ise şunlardır: ‘&amp;(and), |(or), ~ (not)’</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Önce operatörün işletilmesine örek görelim: iki boolean dizi arasında &#39;ve&#39; işlemi yapılması</span>
@@ -1277,7 +1275,7 @@ b =
 </div>
 </div>
 </div>
-<p>Bir boolean dizisinde bütün değerler doğru mu veya en az bir değer doğru var mı kontrol edebiliriz: .any(), .all()</p>
+<p>Bir boolean dizisinde bütün değerler doğru mu veya en az bir değer doğru var mı kontrol edebiliriz: .any(), .all(). Tanımladığımız x, y, z dizilerinin içeriğini ve operasyonlar kulanıldığında elde edilen değerleri inceleyiniz.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">])</span>
@@ -1301,13 +1299,14 @@ x.all() =  True , y.all() =  False , z.all() =  False
 </div>
 </div>
 </div>
-<p>Buna ihtiyaç duyduğumuz nokta: örneğin bize verilen bir büyük tabloda NaN değerleri bulunup bulunmadığını kontrol etmek istiyoruz. np.isnan fonksiyonu ile her elemanın nan olup olmadığını değer olarak içeren bir dizi oluşturup daha sonra ‘içinde en az bir True var  mı?’ işlemini yapabiliriz:</p>
+<p>Buna ihtiyaç duyduğumuz nokta: örneğin bize verilen bir büyük tabloda NaN değerleri bulunup bulunmadığını kontrol etmek istiyoruz. np.isnan() fonksiyonu ile her elemanın nan olup olmadığını değer olarak içeren bir dizi oluşturup daha sonra ‘içinde en az bir True var  mı?’ işlemini uygulayabiliriz:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dizi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="mi">6</span><span class="p">]])</span>
 <span class="n">nan_karar_dizisi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">dizi</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Karar dizisi:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">nan_karar_dizisi</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;içinde en az bir nan değer var mı?:&#39;</span><span class="p">,</span> <span class="n">nan_karar_dizisi</span><span class="o">.</span><span class="n">any</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;bütün değerler nan mı?:&#39;</span><span class="p">,</span> <span class="n">nan_karar_dizisi</span><span class="o">.</span><span class="n">all</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -1317,6 +1316,7 @@ x.all() =  True , y.all() =  False , z.all() =  False
  [False  True False]] 
 
 içinde en az bir nan değer var mı?: True
+bütün değerler nan mı?: False
 </pre></div>
 </div>
 </div>
@@ -1417,6 +1417,20 @@ b =
 <p>Boyutu farklı diziler arasında işlemleri yapmaya da ihtiyaç duyacağız. Örnekleri inceleyiniz:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1"># a&#39;nın içeriğini hatırlayalım</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1 2 3]
+ [3 4 5]
+ [5 6 7]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">+</span> <span class="mi">100</span> <span class="c1"># 2 boyutlu bir diziye sayı ekle -&gt; &#39;broadcast&#39;</span>
 </pre></div>
 </div>
@@ -1478,10 +1492,7 @@ b =
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ilk 10 ornek: 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [0.         0.06279052 0.12533323 0.18738131 0.24868989 0.30901699
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ilk 10 ornek:  [0.         0.06279052 0.12533323 0.18738131 0.24868989 0.30901699
  0.36812455 0.42577929 0.48175367 0.53582679]
 </pre></div>
 </div>
@@ -1491,13 +1502,14 @@ b =
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">dalga</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">dalga</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">);</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Zaman (saniye)&#39;</span><span class="p">);</span><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Genlik&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/Ek2_NumpyHizliTekrar_110_0.png" src="../_images/Ek2_NumpyHizliTekrar_110_0.png" />
+<img alt="../_images/Ek2_NumpyHizliTekrar_115_0.png" src="../_images/Ek2_NumpyHizliTekrar_115_0.png" />
 </div>
 </div>
 <p><strong>UYGULAMA:</strong></p>
@@ -1514,13 +1526,14 @@ b =
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title</span>
 <span class="n">dalga</span><span class="p">[</span><span class="n">dalga</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">dalga</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">dalga</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">);</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Zaman (saniye)&#39;</span><span class="p">);</span><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Genlik&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/Ek2_NumpyHizliTekrar_115_0.png" src="../_images/Ek2_NumpyHizliTekrar_115_0.png" />
+<img alt="../_images/Ek2_NumpyHizliTekrar_120_0.png" src="../_images/Ek2_NumpyHizliTekrar_120_0.png" />
 </div>
 </div>
 <p><strong>UYGULAMA:</strong></p>
@@ -1539,7 +1552,7 @@ b =
 <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">link</span><span class="p">,</span> <span class="n">allow_redirects</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;photo.jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
 
-<span class="c1"># CV2 küyüphanesi ile görüntü okuma, renk dönüştürme işlemleri</span>
+<span class="c1"># CV2 kütüphanesi ile görüntü okuma, renk dönüştürme işlemleri</span>
 <span class="n">goruntu_piksel_matrisi_renkli</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;photo.jpg&#39;</span><span class="p">)</span> <span class="c1"># Görüntüyü dosyadan okuma</span>
 
 <span class="c1"># Renkli görüntüyü griye dönüştürme. Bunu her piksel için tek sayı ile temsil </span>
@@ -1553,7 +1566,7 @@ b =
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/Ek2_NumpyHizliTekrar_119_0.png" src="../_images/Ek2_NumpyHizliTekrar_119_0.png" />
+<img alt="../_images/Ek2_NumpyHizliTekrar_124_0.png" src="../_images/Ek2_NumpyHizliTekrar_124_0.png" />
 </div>
 </div>
 <p>Görüntümüz bir numpy-array içerisinde. Boyut bilgileri bize satır ve sütun sayısını verecektir</p>
@@ -1573,7 +1586,7 @@ Sutun sayısı:  960
 </div>
 </div>
 </div>
-<p>Uygulama 1 ) Görüntünün sol üst dörtte birlik bölümünü çizdiren bir kod parçası yazınız</p>
+<p><strong>Uygulama 1 )</strong> Görüntünün sol üst dörtte birlik bölümünü çizdiren bir kod parçası yazınız</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># kodunuzu buraya yazınız</span>
@@ -1591,7 +1604,7 @@ Sutun sayısı:  960
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/Ek2_NumpyHizliTekrar_125_0.png" src="../_images/Ek2_NumpyHizliTekrar_125_0.png" />
+<img alt="../_images/Ek2_NumpyHizliTekrar_130_0.png" src="../_images/Ek2_NumpyHizliTekrar_130_0.png" />
 </div>
 </div>
 <p>Görüntümüze biraz gürültü ekleyelim. 100 pixel’de rastgele seçilmiş bir tanesini 0 (koyu siyah) yaparak gürültü ekleyebiliriz</p>
@@ -1601,7 +1614,7 @@ Sutun sayısı:  960
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">satirSayisi</span><span class="p">):</span>
   <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">sutunSayisi</span><span class="p">):</span>
     <span class="k">if</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mf">0.01</span><span class="p">):</span>
-      <span class="n">goruntu_piksel_matrisi_gri</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span>
+      <span class="n">goruntu_piksel_matrisi_gri</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="c1">#Gürültülü görüntüyü çizdirelim</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">goruntu_piksel_matrisi_gri</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_GRAY2RGB</span><span class="p">))</span>
@@ -1610,12 +1623,12 @@ Sutun sayısı:  960
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/Ek2_NumpyHizliTekrar_127_0.png" src="../_images/Ek2_NumpyHizliTekrar_127_0.png" />
+<img alt="../_images/Ek2_NumpyHizliTekrar_132_0.png" src="../_images/Ek2_NumpyHizliTekrar_132_0.png" />
 </div>
 </div>
-<p>Uygulama - 2) Gürültüyü median filtre ile kaldıran bir kod parçası yazınız. Bunun için yapmanız gereken; her piksel için, piksel değerini ve çevresindeki değerleri taşıyan bir dizinin medyan değerini bulup, bunu yeni piksel değeri olarak atamak.</p>
-<p>Örnek: Aşağıdaki örnekte hedef, merkezdeki 70 değerini taşıyan pikselin değerini değiştirmek. Önce pikselin kendisi ve çevresindeki tüm değerlerle beraber bir dizi oluşturuluyor. Daha sonra dizideki değerlerin sıraya dizilmesi ve ortadaki değerin alınmasıyla medyan değerine erişiliyor ve bu değer merkezdeki pikselin yeni değeri olarak atanıyor (sıraya dizme ve ortanca bulma işlemini np.median() ile gerçekleştirebilirsiniz). Bu işlem, çok düşük veya çok yüksek değerlerin yerine daha orta düzey değerler yerleştirilerek görüntünün uç değerlerden filtrelenmesini sağlayacaktır.</p>
-<p>Bu işlemi görüntünün sınır pikselleri hariç tüm pikselleri için yapan bir kod parçası yazınız.</p>
+<p><strong>Uygulama - 2)</strong> Gürültüyü median filtre ile kaldıran bir kod parçası yazınız. Bunun için yapmanız gereken; her piksel için, piksel değerini ve çevresindeki değerleri taşıyan bir dizinin medyan değerini bulup, bunu yeni piksel değeri olarak atamak.</p>
+<p><em>Örnek:</em> Aşağıdaki şekilde sunuan örnekte hedef, merkezdeki 70 değerini taşıyan pikselin değerini değiştirmek. Önce pikselin kendisi ve çevresindeki tüm değerlerle beraber bir dizi oluşturuluyor. Daha sonra dizideki değerlerin sıraya dizilmesi ve ortadaki değerin alınmasıyla medyan değerine erişiliyor ve bu değer merkezdeki pikselin yeni değeri olarak atanıyor (sıraya dizme ve ortanca bulma işlemini np.median() ile gerçekleştirebilirsiniz). Bu işlem, çok düşük veya çok yüksek değerlerin yerine daha orta düzey değerler yerleştirilerek görüntünün uç değerlerden filtrelenmesini sağlayacaktır.</p>
+<p>Bu işlemi görüntünün sınır/çerçeve pikselleri (ilk kolon, son kolo, ilk satır ve son satır pikselleri) hariç tüm pikselleri için yapan bir kod parçası yazınız.</p>
 <p><img alt="Medyan filtre grafik açıklama" src="https://www.researchgate.net/profile/Benjamin_Weyori/publication/280925268/figure/fig1/AS:391477344653326&#64;1470346880378/A-graphical-depiction-of-the-median-filter-operation.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1643,7 +1656,7 @@ Sutun sayısı:  960
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/Ek2_NumpyHizliTekrar_132_0.png" src="../_images/Ek2_NumpyHizliTekrar_132_0.png" />
+<img alt="../_images/Ek2_NumpyHizliTekrar_137_0.png" src="../_images/Ek2_NumpyHizliTekrar_137_0.png" />
 </div>
 </div>
 <p>Benzer görüntü işleme örnekleri için bakınız:</p>
